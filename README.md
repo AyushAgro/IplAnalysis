@@ -22,11 +22,10 @@ $ python app.py
 
 Then it will automatically create Result Folder and std.log which are basically used to store the output and log of your code
 
-# Input and Output
-1. I took single file name all_matches.csv which contain large data from all ipl held till no wand i just run my code, you can choose some other files by just copy pasting it inside Data Directory
-2. My output is Not printed on screen but saved in a text file name after the file name of input just so it can be unique
+Input and Output
+1. I took a single file named all_matches.csv which contains large data from all Ipl held till now and i just run my code, you can choose some other files by just copy pasting it inside the Data Directory
+2. My output is Not printed on screen but saved in a text file name after the filename of input just so it can be unique
 3. Total Time Taken for input of size [3834333 * 20] is  52.054842710494995 sec.
-
 
 Output --> [check Result directory for all output]
 ![1](https://user-images.githubusercontent.com/63579929/134809593-f1f3a9ba-31ac-4834-ba05-0993694a11ae.png)
