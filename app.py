@@ -1,6 +1,6 @@
 import pandas as pd
 from tabulate import tabulate
-import os,sys, yaml, collections, logging
+import os, sys, yaml, collections, logging
 from exception import *
 from classes import Team, Match
 from scoreboard import create_scoreboard, preprocessData
@@ -12,10 +12,12 @@ data_dir = ""
 log_file = ""
 orig_stdout = sys.stdout
 
-def read_yaml():
+
+def read_yaml():  # To read Config YAML
     global allowed_filetype, output_dir, data_dir, log_file
+
     with open("config.yaml") as f:
-        data = yaml.load(f, Loader= SafeLoader)
+        data = yaml.load(f, Loader=SafeLoader)
 
     data_dir = data["File"]["data_dir"]
     output_dir = data["File"]["output_dir"]
@@ -23,11 +25,12 @@ def read_yaml():
     log_file = data["File"]["log_file"]
 
     files = os.listdir()
-    if data_dir not in files:
+    if data_dir not in files:  # Cheking if data directory is present or not
         raise DirectoryNotFound(data_dir)
 
     if output_dir not in files:
         os.mkdir(output_dir)
+
 
 def add_to_log(logger, type, message):
     if type == "info":
@@ -39,6 +42,7 @@ def add_to_log(logger, type, message):
     elif type == "error":
         logger.error(message)
     return
+
 
 read_yaml()
 

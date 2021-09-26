@@ -24,6 +24,7 @@ required_columns = [
     "player_dismissed",
 ]
 
+
 def create_scoreboard(Match, match_df, teams):
     match_detail = pd.DataFrame(
         {
@@ -39,7 +40,7 @@ def create_scoreboard(Match, match_df, teams):
     print(header)
     match_df.apply(lambda x: get_scoreboard(x, teams), axis=1)
     columns = ["Batmans", "Status", "Run", "Ball", "4s", "6s"]
-    for team_name, team in teams.items():
+    for _, team in teams.items():
         result = pd.DataFrame(columns=columns)
 
         for name, player in team.players.items():
@@ -76,8 +77,15 @@ def get_scoreboard(row, teams):
     non_striker = teams[BattingTeam].find_player(row["non_striker"])
     bowler = teams[BowlingTeam].find_player(row["bowler"])
 
-    if int(row["extras"]) > 0:
-        extras = ["wides", "noballs", "byes", "legbyes", "penalty"]
+    if int(row["extras"]) > 0:  # Checking if there is any extra or not.
+        extras = [
+            "wides",
+            "noballs",
+            "byes",
+            "legbyes",
+            "penalty",
+        ]  # which type of extra it is
+
         if row["byes"] > 0 or row["legbyes"] > 0 or row["penalty"] > 0:
             striker.ball_played += 1
             bowler.balled += 1
@@ -105,6 +113,7 @@ def get_scoreboard(row, teams):
 
     striker.add_run(row["runs_off_bat"])
 
+
 def preprocessData(df):
     global required_columns
     string_type = ["wicket_type", "player_dismissed"]
@@ -113,7 +122,6 @@ def preprocessData(df):
     for column in columns:
         if column not in required_columns:
             df.drop(column, inplace=True, axis=1)
-            # add_to_log(logger, 'error', 'Required Columns is not Found')
         if column in string_type:
             df[column] = df[column].fillna("")
         elif column in numerical_type:
