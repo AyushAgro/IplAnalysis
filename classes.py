@@ -16,6 +16,7 @@ class Team:
         self.name = name
         self.players = defaultdict(Player)
         self.extra = {}
+        self.extra_run = 0
 
     def find_player(self, name):
         if name not in self.players:
@@ -30,6 +31,7 @@ class Team:
 
     def add_extra(self, type, run):
         self.extra[type] = self.extra.get(type, 0) + run
+        self.extra_run += run
 
 
 class Player:

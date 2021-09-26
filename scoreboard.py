@@ -58,7 +58,7 @@ def create_scoreboard(Match, match_df, teams):
             result = result.append(row, ignore_index=True)
 
         table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
-        print("\n" + team.name + "\n" + table + "\n" + "Extra(", end="")
+        print("\n" + team.name + "\n" + table + "\n" + "Extra -", int(team.extra_run),  '(' , end="")
         for key, value in team.extra.items():
             print(f" {key[0]}-{int(value)},", end="")
         print(")")

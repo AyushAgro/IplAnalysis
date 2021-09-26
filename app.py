@@ -5,7 +5,9 @@ from exception import *
 from classes import Team, Match
 from scoreboard import create_scoreboard, preprocessData
 from yaml.loader import SafeLoader
+import time
 
+start_time = time.time()
 allowed_filetype = []
 output_dir = ""
 data_dir = ""
@@ -52,16 +54,17 @@ logger.setLevel(logging.DEBUG)
 output_file_handler = logging.FileHandler(log_file)
 logger.addHandler(output_file_handler)
 
+
+
 for filename in os.listdir(data_dir):
-    file = data_dir + "/" + filename
+    file = data_dir + '/' + filename
     add_to_log(logger, "info", f"Currently Processing File {file}")
 
-    if file.split(".")[-1] not in allowed_filetype:
-        add_to_log(logger, "error", "Invalid File Type")
-        raise InvalidFile(file.split(".")[-1], allowed_filetype)
-
-    df = pd.read_csv(file)
-    df = preprocessData(df)
+    df = pd.read_csv(file, low_memory=False)
+    try:
+        df = preprocessData(df)
+    except :
+        raise InvalidFormat
 
     if df.empty:
         add_to_log(logger, "error", "Empty Table")
@@ -75,17 +78,18 @@ for filename in os.listdir(data_dir):
 
     for match_id in all_match:
         add_to_log(logger, "info", f"Match Start  {match_id}")
-
         match_df = df_group_match.get_group(match_id)
+
         if match_df.empty:
             raise TableEmpty
 
         teams = collections.defaultdict(Team)
-        teams1 = match_df.loc[0, "batting_team"]
-        teams2 = match_df.loc[0, "bowling_team"]
-        venue = match_df.loc[0, "venue"]
-        season = match_df.loc[0, "season"]
-        start_date = match_df.loc[0, "start_date"]
+        teams1 = match_df['batting_team'].values[0]
+        teams2 =  match_df['bowling_team'].values[0]
+        venue =  match_df['venue'].values[0]
+        season = match_df["season"].values[0]
+        start_date = match_df["start_date"].values[0]
+
         teams[teams1] = Team(teams1)
         teams[teams2] = Team(teams2)
 
@@ -95,5 +99,6 @@ for filename in os.listdir(data_dir):
         add_to_log(logger, "info", f"Result of  match - {match_id} is added")
         add_to_log(logger, "info", f"Match is Ended - {match_id}")
 
-        sys.stdout = orig_stdout
-        output_file.close()
+    sys.stdout = orig_stdout
+    output_file.close()
+print(f'Total Time Taken for input of size {df.size} is ' ,time.time() - start_time)
