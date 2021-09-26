@@ -2,21 +2,73 @@ import pandas as pd
 from tabulate import tabulate
 from collections import defaultdict
 import os
+import sys
 from exception import *
+import logging
+from yaml.loader import SafeLoader
+import yaml
 
-diretory = os.getcwd()
-Data_directory = 'Data'
-output_directory = 'Result'
-if output_directory not in os.listdir():
-    os.mkdir(output_directory)
-allowed_filetype = set()
-allowed_filetype.add('csv')
 
-required_columns = ['match_id', 'season' ,'start_date', 'venue',
+allowed_filetype = []
+output_dir = ''
+data_dir = ''
+log_file = ''
+orig_stdout = sys.stdout
+
+
+def add_to_log(logger, type, message):
+    if type == 'info':
+        logger.info(message)
+    elif type == 'warning':
+        logger.warning(message)
+    elif type == 'debug':
+        logger.debug(message)
+    elif type == 'error':
+        logger.error(message)
+    return
+
+
+def read_yaml():
+    global allowed_filetype, output_dir, data_dir, log_file
+    with open('config.yaml') as f:
+        data = yaml.load(f, Loader=SafeLoader)
+
+    data_dir = data['File']['data_dir']
+    output_dir = data['File']['output_dir']
+    allowed_filetype = data['FileType']
+    log_file = data['File']['log_file']
+
+    files = os.listdir()
+    if data_dir not in files:
+        raise DirectoryNotFound(data_dir)
+
+    if output_dir not in files:
+        os.mkdir(output_dir)
+
+
+read_yaml()
+logging.basicConfig(filename=log_file,
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+logger = logging.getLogger()
+
+logger.setLevel(logging.DEBUG)
+
+output_file_handler = logging.FileHandler(log_file)
+
+# stdout_handler = logging.StreamHandler(sys.stdout)
+
+
+logger.addHandler(output_file_handler)
+
+# logger.addHandler(stdout_handler)
+
+required_columns = ['match_id', 'season', 'start_date', 'venue',
                     'ball', 'batting_team', 'bowling_team',
                     'striker', 'non_striker', 'bowler', 'runs_off_bat',
                     'extras', 'wides', 'noballs', 'byes', 'legbyes',
                     'penalty', 'wicket_type', 'player_dismissed']
+
 
 class Team:
     def __init__(self, name):
@@ -111,7 +163,8 @@ def preprocessData(df):
     columns = df.columns
     for column in columns:
         if column not in required_columns:
-            raise ColumnsNotFound
+            df.drop(column, inplace = True, axis = 1)
+            # add_to_log(logger, 'error', 'Required Columns is not Found')
         if column in string_type:
             df[column] = df[column].fillna('')
         elif column in numerical_type:
@@ -119,27 +172,30 @@ def preprocessData(df):
     return df
 
 
-for filename in os.listdir(Data_directory):
-    file = Data_directory + '/' + filename
+for filename in os.listdir(data_dir):
+    file = data_dir + '/' + filename
+    add_to_log(logger, 'info', f"Currently Processing File {file}")
 
     if file.split('.')[-1] not in allowed_filetype:
-        raise InvalidFile
+        add_to_log(logger, 'error', 'Invalid File Type')
+        raise InvalidFile(file.split('.')[-1], allowed_filetype)
 
     df = pd.read_csv(file)
+    df = preprocessData(df)
 
     if df.empty:
+        add_to_log(logger, 'error', 'Empty Table')
         raise TableEmpty
 
-    output_file = open(output_directory + '/' +
+    output_file = open(output_dir + '/' +
                        filename.split('.')[0] + '.txt', 'w')
+    sys.stdout = output_file
 
     groups = df.groupby('match_id')
-
-    # extract keys from groups
     all_match = groups.groups.keys()
 
     for match_id in all_match:
-        print('-' * 130, file=output_file)
+        add_to_log(logger, 'info', f"Match Start  {match_id}")
         match_df = groups.get_group(match_id)
         teams = defaultdict(Team)
 
@@ -154,8 +210,9 @@ for filename in os.listdir(Data_directory):
                                      'Teams': teams2 + ' vs ' + teams1,
                                      'Venue': venue, 'season': season,
                                      'Start Date': start_date}, index=[0])
+
         print(tabulate(match_detail, headers='keys', tablefmt='grid',
-                       showindex=False), file=output_file)
+                       showindex=False))
 
         teams[teams1] = Team(teams1)
         teams[teams2] = Team(teams2)
@@ -176,16 +233,20 @@ for filename in os.listdir(Data_directory):
 
                 result = result.append(row, ignore_index=True)
 
-            print(team.name, file=output_file)
+            print(team.name )
 
             print(tabulate(result, headers='keys', tablefmt='fancy_grid',
-                           showindex=False), file=output_file)
-            print('Extra (', end='', file=output_file)
+                           showindex=False))
+            print('Extra (', end='' )
 
             for key, value in team.extra.items():
-                print(f'{key[0]}-{int(value)},', end=' ', file=output_file)
+                print(f'{key[0]}-{int(value)},')
 
-            print(')', file=output_file)
+            print(')')
 
-            print(file=output_file)
-        print('-' * 130, file=output_file)
+
+        add_to_log(logger, 'info', f'Result of  match - {match_id} is added')
+        add_to_log(logger, 'info', f'Match is Ended - {match_id}')
+        sys.stdout = orig_stdout
+        output_file.close()
+
