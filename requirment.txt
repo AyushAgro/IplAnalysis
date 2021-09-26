@@ -1,0 +1,6 @@
+pandas
+collections
+os
+tabulate
+yaml
+pytest
