@@ -7,6 +7,7 @@ from scoreboard import create_scoreboard, preprocessData
 from yaml.loader import SafeLoader
 import time
 
+
 start_time = time.time()
 allowed_filetype = []
 output_dir = ""
@@ -55,20 +56,22 @@ output_file_handler = logging.FileHandler(log_file)
 logger.addHandler(output_file_handler)
 
 
-
 for filename in os.listdir(data_dir):
-    file = data_dir + '/' + filename
+    file = data_dir + "/" + filename
     add_to_log(logger, "info", f"Currently Processing File {file}")
 
     df = pd.read_csv(file, low_memory=False)
+    info_file = str(file.split('.')[:-1]) + '_info' + '.csv'
     try:
-        df = preprocessData(df)
-    except :
-        raise InvalidFormat
+        df_info = pd.read_csv(info_file, low_memory=False)
+    except FileNotFoundError:
+        add_to_log(logger, 'error', f'Info File cannot be found of {file}')
+        df_info = None
 
     if df.empty:
         add_to_log(logger, "error", "Empty Table")
         raise TableEmpty
+    df = preprocessData(df)
 
     output_file = open(output_dir + "/" + filename.split(".")[0] + ".txt", "w")
     sys.stdout = output_file
@@ -84,9 +87,9 @@ for filename in os.listdir(data_dir):
             raise TableEmpty
 
         teams = collections.defaultdict(Team)
-        teams1 = match_df['batting_team'].values[0]
-        teams2 =  match_df['bowling_team'].values[0]
-        venue =  match_df['venue'].values[0]
+        teams1 = match_df["batting_team"].values[0]
+        teams2 = match_df["bowling_team"].values[0]
+        venue = match_df["venue"].values[0]
         season = match_df["season"].values[0]
         start_date = match_df["start_date"].values[0]
 
@@ -101,4 +104,5 @@ for filename in os.listdir(data_dir):
 
     sys.stdout = orig_stdout
     output_file.close()
-print(f'Total Time Taken for input of size {df.size} is ' ,time.time() - start_time)
+print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
+# Total Time Taken for input of size 3834333 is  52.054842710494995

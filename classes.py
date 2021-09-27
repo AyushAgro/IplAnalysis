@@ -15,23 +15,30 @@ class Team:
     def __init__(self, name):
         self.name = name
         self.players = defaultdict(Player)
-        self.extra = {}
+        self.extra = {'b': 0, 'lb': 0, 'w': 0, 'nb': 0, 'p': 0}
         self.extra_run = 0
-
+        self.out = 0
     def find_player(self, name):
         if name not in self.players:
             self.players[name] = Player(name)
         return self.players[name]
 
-    def total_score(self):
-        total_score = self.extra()
-        for player in self.players:
-            total_score += player.get_run()
-        return total_score
-
     def add_extra(self, type, run):
         self.extra[type] = self.extra.get(type, 0) + run
         self.extra_run += run
+
+    def get_total(self):
+        runs = 0
+        for key, value in self.players.items():
+            runs += value.run_scored
+        return runs + self.extra_run
+
+
+    def reset(self):
+        self.players = defaultdict(Player)
+        self.extra = {'b': 0, 'lb': 0, 'w': 0, 'nb': 0, 'p': 0}
+        self.extra_run = 0
+        self.out = 0
 
 
 class Player:
@@ -50,6 +57,9 @@ class Player:
             self.fours += 1
         if run == 6:
             self.six += 1
+    def playing(self):
+        self.out = 'Not Out'
 
     def isOut(self, name):
         self.out = str(name)
+
