@@ -48,3 +48,9 @@ class DirectoryNotFound(Exception):
     def __init__(self, dir):
         self.code = 8
         self.message = f"{dir} not found"
+
+
+class MaximumPlayer(Exception):
+    def __init__(self, name):
+        self.code = 9
+        self.message = f"Any Single Team can have maximum of 11 player playing but your input has more than 11 player in team {name}"

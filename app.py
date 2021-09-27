@@ -46,6 +46,13 @@ def add_to_log(logger, type, message):
         logger.error(message)
     return
 
+def get_teams(row, team):
+    team_name = row['Team Name']
+    if team_name not in team:
+        newTeam = Team(team_name)
+        team[team_name] = newTeam
+    team[team_name].find_player(row['Player Name'])
+
 
 read_yaml()
 
@@ -58,15 +65,20 @@ logger.addHandler(output_file_handler)
 
 for filename in os.listdir(data_dir):
     file = data_dir + "/" + filename
+    if '_info' in file: continue
     add_to_log(logger, "info", f"Currently Processing File {file}")
 
     df = pd.read_csv(file, low_memory=False)
-    info_file = str(file.split('.')[:-1]) + '_info' + '.csv'
+    info_file = str(file.split(".")[:-1][0]) + "_info" + ".csv"
+    teams = collections.defaultdict(Team)
+
     try:
-        df_info = pd.read_csv(info_file, low_memory=False)
-    except FileNotFoundError:
-        add_to_log(logger, 'error', f'Info File cannot be found of {file}')
-        df_info = None
+        df_info = pd.read_csv(info_file, names = ['info', 'Team Name','Player Name', 'code'])
+        df_info = df_info.drop(['info', 'code'], axis = 1).reset_index(drop = True ).dropna()
+        df_info = df_info[df_info['Team Name'] != 'people']
+        df_info.apply(lambda x: get_teams(x, teams), axis = 1)
+    except:
+        add_to_log(logger, "error", f"Info File cannot be found of name {file}")
 
     if df.empty:
         add_to_log(logger, "error", "Empty Table")
@@ -86,15 +98,16 @@ for filename in os.listdir(data_dir):
         if match_df.empty:
             raise TableEmpty
 
-        teams = collections.defaultdict(Team)
         teams1 = match_df["batting_team"].values[0]
         teams2 = match_df["bowling_team"].values[0]
         venue = match_df["venue"].values[0]
         season = match_df["season"].values[0]
         start_date = match_df["start_date"].values[0]
-
-        teams[teams1] = Team(teams1)
-        teams[teams2] = Team(teams2)
+        
+        if teams1 not in teams:
+            teams[teams1] = Team(teams1)
+        if teams2 not in teams:
+            teams[teams2] = Team(teams2)
 
         match = Match(match_id, teams1, teams2, venue, start_date, season)
         create_scoreboard(match, match_df, teams)

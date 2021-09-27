@@ -1,4 +1,5 @@
 from collections import defaultdict
+from exception import MaximumPlayer
 
 
 class Match:
@@ -15,10 +16,13 @@ class Team:
     def __init__(self, name):
         self.name = name
         self.players = defaultdict(Player)
-        self.extra = {'b': 0, 'lb': 0, 'w': 0, 'nb': 0, 'p': 0}
+        self.extra = {"b": 0, "lb": 0, "w": 0, "nb": 0, "p": 0}
         self.extra_run = 0
         self.out = 0
+
     def find_player(self, name):
+        if len(self.players) > 11:
+            raise MaximumPlayer(self.name)
         if name not in self.players:
             self.players[name] = Player(name)
         return self.players[name]
@@ -33,10 +37,13 @@ class Team:
             runs += value.run_scored
         return runs + self.extra_run
 
-
     def reset(self):
+        player_name = list(self.players.keys())
+        print(player_name)
         self.players = defaultdict(Player)
-        self.extra = {'b': 0, 'lb': 0, 'w': 0, 'nb': 0, 'p': 0}
+        for player in player_name:
+            self.players[player] = Player(player)
+        self.extra = {"b": 0, "lb": 0, "w": 0, "nb": 0, "p": 0}
         self.extra_run = 0
         self.out = 0
 
@@ -49,7 +56,6 @@ class Player:
         self.fours = 0
         self.six = 0
         self.out = ""
-        self.balled = 0
 
     def add_run(self, run):
         self.run_scored += run
@@ -57,9 +63,9 @@ class Player:
             self.fours += 1
         if run == 6:
             self.six += 1
+
     def playing(self):
-        self.out = 'Not Out'
+        self.out = "Not Out"
 
     def isOut(self, name):
         self.out = str(name)
-
