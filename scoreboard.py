@@ -55,33 +55,31 @@ def create_scoreboard(Match, match_df, teams):
         print()
         if innings > 2 and innings % 2 == 1:
             declare_result(score, innings)
+            BattingTeam.reset()
+            BowlingTeam.reset()
             print('Super Over-' + 'I' * (innings // 2))
         innings += 1
 
         result = pd.DataFrame(columns=columns)
         for name, player in BattingTeam.players.items():
-            row = {
-                "Batmans": name,
-                "Status": player.out,
-                "Run": player.run_scored,
-                "Ball": player.ball_played,
-                "4s": player.fours,
-                "6s": player.six,
-            }
-            result = result.append(row, ignore_index=True)
+            if player.out != "":
+                row = {
+                    "Batmans": name,
+                    "Status": player.out,
+                    "Run": player.run_scored,
+                    "Ball": player.ball_played,
+                    "4s": player.fours,
+                    "6s": player.six,
+                }
+                result = result.append(row, ignore_index=True)
 
         table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
         print(f"{BattingTeam.name}\n{table}\nExtra - {int(BattingTeam.extra_run)} (",end="",)
-        # print(BattingTeam.extra)
 
         for key, value in BattingTeam.extra.items():
             print(f" {key}-{int(value)},", end="")
-
         print(")")
         score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
-        BattingTeam.reset()
-        BowlingTeam.reset()
-    # print(score)
     try:
         declare_result(score, innings)
     except Exception as e:
@@ -105,7 +103,6 @@ def get_scoreboard(row, teams):
     striker.playing()
     non_striker.playing()
     striker.ball_played += 1
-    bowler.balled += 1
     striker.add_run(row["runs_off_bat"])
 
     if int(row["extras"]) > 0:  # Checking if there is any extra or not.
