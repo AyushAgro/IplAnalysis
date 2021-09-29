@@ -1,0 +1,1703 @@
+2021-09-29 13:45:26,256 - INFO       - Currently Processing File /home/pheonix/IplAnalysis/Data/all_matches.csv
+2021-09-29 13:45:26,947 - WARNING    - info File cannot be found for given /home/pheonix/IplAnalysis/Data/all_matches.csv
+2021-09-29 13:45:26,948 - INFO       - Begin function preprocessData
+2021-09-29 13:45:26,951 - WARNING    - season Cannot be changed into int16
+2021-09-29 13:45:28,817 - INFO       - Returned: preprocessData
+2021-09-29 13:45:28,839 - INFO       - Match Start  335982
+2021-09-29 13:45:28,903 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,054 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,054 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,054 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,054 - INFO       - Result of  match - 335982 is added
+2021-09-29 13:45:29,055 - INFO       - Match is Ended - 335982
+2021-09-29 13:45:29,055 - INFO       - Match Start  335983
+2021-09-29 13:45:29,056 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,163 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,163 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,163 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,163 - INFO       - Result of  match - 335983 is added
+2021-09-29 13:45:29,164 - INFO       - Match is Ended - 335983
+2021-09-29 13:45:29,164 - INFO       - Match Start  335984
+2021-09-29 13:45:29,165 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,250 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,251 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,251 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,251 - INFO       - Result of  match - 335984 is added
+2021-09-29 13:45:29,251 - INFO       - Match is Ended - 335984
+2021-09-29 13:45:29,251 - INFO       - Match Start  335985
+2021-09-29 13:45:29,252 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,402 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,402 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,402 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,402 - INFO       - Result of  match - 335985 is added
+2021-09-29 13:45:29,402 - INFO       - Match is Ended - 335985
+2021-09-29 13:45:29,402 - INFO       - Match Start  335986
+2021-09-29 13:45:29,404 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,555 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,556 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,557 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,557 - INFO       - Result of  match - 335986 is added
+2021-09-29 13:45:29,558 - INFO       - Match is Ended - 335986
+2021-09-29 13:45:29,558 - INFO       - Match Start  335987
+2021-09-29 13:45:29,561 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,749 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,749 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,749 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,749 - INFO       - Result of  match - 335987 is added
+2021-09-29 13:45:29,749 - INFO       - Match is Ended - 335987
+2021-09-29 13:45:29,750 - INFO       - Match Start  335988
+2021-09-29 13:45:29,751 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,854 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,855 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,855 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,855 - INFO       - Result of  match - 335988 is added
+2021-09-29 13:45:29,855 - INFO       - Match is Ended - 335988
+2021-09-29 13:45:29,855 - INFO       - Match Start  335989
+2021-09-29 13:45:29,856 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:29,970 - INFO       - Begin function declare_result
+2021-09-29 13:45:29,971 - INFO       - Returned: declare_result
+2021-09-29 13:45:29,971 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:29,971 - INFO       - Result of  match - 335989 is added
+2021-09-29 13:45:29,971 - INFO       - Match is Ended - 335989
+2021-09-29 13:45:29,971 - INFO       - Match Start  335990
+2021-09-29 13:45:29,972 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,114 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,114 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,114 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,114 - INFO       - Result of  match - 335990 is added
+2021-09-29 13:45:30,114 - INFO       - Match is Ended - 335990
+2021-09-29 13:45:30,115 - INFO       - Match Start  335991
+2021-09-29 13:45:30,116 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,324 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,324 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,324 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,325 - INFO       - Result of  match - 335991 is added
+2021-09-29 13:45:30,325 - INFO       - Match is Ended - 335991
+2021-09-29 13:45:30,325 - INFO       - Match Start  335992
+2021-09-29 13:45:30,326 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,508 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,509 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,509 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,509 - INFO       - Result of  match - 335992 is added
+2021-09-29 13:45:30,509 - INFO       - Match is Ended - 335992
+2021-09-29 13:45:30,509 - INFO       - Match Start  335993
+2021-09-29 13:45:30,511 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,655 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,655 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,655 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,655 - INFO       - Result of  match - 335993 is added
+2021-09-29 13:45:30,655 - INFO       - Match is Ended - 335993
+2021-09-29 13:45:30,656 - INFO       - Match Start  335994
+2021-09-29 13:45:30,657 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,804 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,804 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,804 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,804 - INFO       - Result of  match - 335994 is added
+2021-09-29 13:45:30,804 - INFO       - Match is Ended - 335994
+2021-09-29 13:45:30,804 - INFO       - Match Start  335995
+2021-09-29 13:45:30,806 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:30,970 - INFO       - Begin function declare_result
+2021-09-29 13:45:30,970 - INFO       - Returned: declare_result
+2021-09-29 13:45:30,970 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:30,970 - INFO       - Result of  match - 335995 is added
+2021-09-29 13:45:30,970 - INFO       - Match is Ended - 335995
+2021-09-29 13:45:30,970 - INFO       - Match Start  335996
+2021-09-29 13:45:30,972 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:31,148 - INFO       - Begin function declare_result
+2021-09-29 13:45:31,148 - INFO       - Returned: declare_result
+2021-09-29 13:45:31,148 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:31,148 - INFO       - Result of  match - 335996 is added
+2021-09-29 13:45:31,148 - INFO       - Match is Ended - 335996
+2021-09-29 13:45:31,148 - INFO       - Match Start  335997
+2021-09-29 13:45:31,150 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:31,394 - INFO       - Begin function declare_result
+2021-09-29 13:45:31,394 - INFO       - Returned: declare_result
+2021-09-29 13:45:31,395 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:31,395 - INFO       - Result of  match - 335997 is added
+2021-09-29 13:45:31,395 - INFO       - Match is Ended - 335997
+2021-09-29 13:45:31,395 - INFO       - Match Start  335998
+2021-09-29 13:45:31,397 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:31,651 - INFO       - Begin function declare_result
+2021-09-29 13:45:31,652 - INFO       - Returned: declare_result
+2021-09-29 13:45:31,652 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:31,652 - INFO       - Result of  match - 335998 is added
+2021-09-29 13:45:31,652 - INFO       - Match is Ended - 335998
+2021-09-29 13:45:31,652 - INFO       - Match Start  335999
+2021-09-29 13:45:31,653 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:31,855 - INFO       - Begin function declare_result
+2021-09-29 13:45:31,855 - INFO       - Returned: declare_result
+2021-09-29 13:45:31,855 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:31,855 - INFO       - Result of  match - 335999 is added
+2021-09-29 13:45:31,855 - INFO       - Match is Ended - 335999
+2021-09-29 13:45:31,855 - INFO       - Match Start  336000
+2021-09-29 13:45:31,857 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,066 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,066 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,067 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,067 - INFO       - Result of  match - 336000 is added
+2021-09-29 13:45:32,067 - INFO       - Match is Ended - 336000
+2021-09-29 13:45:32,067 - INFO       - Match Start  336001
+2021-09-29 13:45:32,068 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,186 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,186 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,186 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,187 - INFO       - Result of  match - 336001 is added
+2021-09-29 13:45:32,187 - INFO       - Match is Ended - 336001
+2021-09-29 13:45:32,187 - INFO       - Match Start  336002
+2021-09-29 13:45:32,188 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,365 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,365 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,365 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,365 - INFO       - Result of  match - 336002 is added
+2021-09-29 13:45:32,365 - INFO       - Match is Ended - 336002
+2021-09-29 13:45:32,365 - INFO       - Match Start  336003
+2021-09-29 13:45:32,366 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,563 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,563 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,563 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,564 - INFO       - Result of  match - 336003 is added
+2021-09-29 13:45:32,564 - INFO       - Match is Ended - 336003
+2021-09-29 13:45:32,564 - INFO       - Match Start  336004
+2021-09-29 13:45:32,565 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,751 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,751 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,751 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,751 - INFO       - Result of  match - 336004 is added
+2021-09-29 13:45:32,751 - INFO       - Match is Ended - 336004
+2021-09-29 13:45:32,751 - INFO       - Match Start  336005
+2021-09-29 13:45:32,753 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:32,928 - INFO       - Begin function declare_result
+2021-09-29 13:45:32,928 - INFO       - Returned: declare_result
+2021-09-29 13:45:32,929 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:32,929 - INFO       - Result of  match - 336005 is added
+2021-09-29 13:45:32,929 - INFO       - Match is Ended - 336005
+2021-09-29 13:45:32,929 - INFO       - Match Start  336006
+2021-09-29 13:45:32,930 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:33,150 - INFO       - Begin function declare_result
+2021-09-29 13:45:33,150 - INFO       - Returned: declare_result
+2021-09-29 13:45:33,150 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:33,150 - INFO       - Result of  match - 336006 is added
+2021-09-29 13:45:33,150 - INFO       - Match is Ended - 336006
+2021-09-29 13:45:33,150 - INFO       - Match Start  336007
+2021-09-29 13:45:33,152 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:33,351 - INFO       - Begin function declare_result
+2021-09-29 13:45:33,352 - INFO       - Returned: declare_result
+2021-09-29 13:45:33,352 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:33,352 - INFO       - Result of  match - 336007 is added
+2021-09-29 13:45:33,352 - INFO       - Match is Ended - 336007
+2021-09-29 13:45:33,352 - INFO       - Match Start  336008
+2021-09-29 13:45:33,353 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:33,533 - INFO       - Begin function declare_result
+2021-09-29 13:45:33,533 - INFO       - Returned: declare_result
+2021-09-29 13:45:33,533 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:33,534 - INFO       - Result of  match - 336008 is added
+2021-09-29 13:45:33,534 - INFO       - Match is Ended - 336008
+2021-09-29 13:45:33,534 - INFO       - Match Start  336009
+2021-09-29 13:45:33,535 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:33,688 - INFO       - Begin function declare_result
+2021-09-29 13:45:33,688 - INFO       - Returned: declare_result
+2021-09-29 13:45:33,688 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:33,688 - INFO       - Result of  match - 336009 is added
+2021-09-29 13:45:33,688 - INFO       - Match is Ended - 336009
+2021-09-29 13:45:33,688 - INFO       - Match Start  336010
+2021-09-29 13:45:33,689 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:33,894 - INFO       - Begin function declare_result
+2021-09-29 13:45:33,894 - INFO       - Returned: declare_result
+2021-09-29 13:45:33,894 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:33,894 - INFO       - Result of  match - 336010 is added
+2021-09-29 13:45:33,894 - INFO       - Match is Ended - 336010
+2021-09-29 13:45:33,894 - INFO       - Match Start  336011
+2021-09-29 13:45:33,896 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:34,072 - INFO       - Begin function declare_result
+2021-09-29 13:45:34,072 - INFO       - Returned: declare_result
+2021-09-29 13:45:34,072 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:34,073 - INFO       - Result of  match - 336011 is added
+2021-09-29 13:45:34,073 - INFO       - Match is Ended - 336011
+2021-09-29 13:45:34,073 - INFO       - Match Start  336012
+2021-09-29 13:45:34,074 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:34,267 - INFO       - Begin function declare_result
+2021-09-29 13:45:34,267 - INFO       - Returned: declare_result
+2021-09-29 13:45:34,268 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:34,268 - INFO       - Result of  match - 336012 is added
+2021-09-29 13:45:34,268 - INFO       - Match is Ended - 336012
+2021-09-29 13:45:34,268 - INFO       - Match Start  336013
+2021-09-29 13:45:34,269 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:34,445 - INFO       - Begin function declare_result
+2021-09-29 13:45:34,445 - INFO       - Returned: declare_result
+2021-09-29 13:45:34,445 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:34,445 - INFO       - Result of  match - 336013 is added
+2021-09-29 13:45:34,446 - INFO       - Match is Ended - 336013
+2021-09-29 13:45:34,446 - INFO       - Match Start  336014
+2021-09-29 13:45:34,447 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:34,644 - INFO       - Begin function declare_result
+2021-09-29 13:45:34,644 - INFO       - Returned: declare_result
+2021-09-29 13:45:34,644 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:34,644 - INFO       - Result of  match - 336014 is added
+2021-09-29 13:45:34,644 - INFO       - Match is Ended - 336014
+2021-09-29 13:45:34,644 - INFO       - Match Start  336015
+2021-09-29 13:45:34,645 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:34,813 - INFO       - Begin function declare_result
+2021-09-29 13:45:34,813 - INFO       - Returned: declare_result
+2021-09-29 13:45:34,813 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:34,813 - INFO       - Result of  match - 336015 is added
+2021-09-29 13:45:34,813 - INFO       - Match is Ended - 336015
+2021-09-29 13:45:34,813 - INFO       - Match Start  336016
+2021-09-29 13:45:34,814 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,013 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,013 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,013 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,013 - INFO       - Result of  match - 336016 is added
+2021-09-29 13:45:35,013 - INFO       - Match is Ended - 336016
+2021-09-29 13:45:35,013 - INFO       - Match Start  336017
+2021-09-29 13:45:35,014 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,185 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,185 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,186 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,186 - INFO       - Result of  match - 336017 is added
+2021-09-29 13:45:35,186 - INFO       - Match is Ended - 336017
+2021-09-29 13:45:35,186 - INFO       - Match Start  336018
+2021-09-29 13:45:35,188 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,359 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,359 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,359 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,359 - INFO       - Result of  match - 336018 is added
+2021-09-29 13:45:35,359 - INFO       - Match is Ended - 336018
+2021-09-29 13:45:35,360 - INFO       - Match Start  336019
+2021-09-29 13:45:35,361 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,557 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,557 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,557 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,557 - INFO       - Result of  match - 336019 is added
+2021-09-29 13:45:35,557 - INFO       - Match is Ended - 336019
+2021-09-29 13:45:35,557 - INFO       - Match Start  336020
+2021-09-29 13:45:35,558 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,731 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,731 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,731 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,731 - INFO       - Result of  match - 336020 is added
+2021-09-29 13:45:35,731 - INFO       - Match is Ended - 336020
+2021-09-29 13:45:35,731 - INFO       - Match Start  336021
+2021-09-29 13:45:35,732 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:35,927 - INFO       - Begin function declare_result
+2021-09-29 13:45:35,927 - INFO       - Returned: declare_result
+2021-09-29 13:45:35,927 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:35,927 - INFO       - Result of  match - 336021 is added
+2021-09-29 13:45:35,928 - INFO       - Match is Ended - 336021
+2021-09-29 13:45:35,928 - INFO       - Match Start  336022
+2021-09-29 13:45:35,929 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:36,107 - INFO       - Begin function declare_result
+2021-09-29 13:45:36,107 - INFO       - Returned: declare_result
+2021-09-29 13:45:36,107 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:36,107 - INFO       - Result of  match - 336022 is added
+2021-09-29 13:45:36,107 - INFO       - Match is Ended - 336022
+2021-09-29 13:45:36,107 - INFO       - Match Start  336023
+2021-09-29 13:45:36,109 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:36,320 - INFO       - Begin function declare_result
+2021-09-29 13:45:36,320 - INFO       - Returned: declare_result
+2021-09-29 13:45:36,320 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:36,320 - INFO       - Result of  match - 336023 is added
+2021-09-29 13:45:36,320 - INFO       - Match is Ended - 336023
+2021-09-29 13:45:36,320 - INFO       - Match Start  336024
+2021-09-29 13:45:36,321 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:36,531 - INFO       - Begin function declare_result
+2021-09-29 13:45:36,531 - INFO       - Returned: declare_result
+2021-09-29 13:45:36,531 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:36,531 - INFO       - Result of  match - 336024 is added
+2021-09-29 13:45:36,532 - INFO       - Match is Ended - 336024
+2021-09-29 13:45:36,532 - INFO       - Match Start  336025
+2021-09-29 13:45:36,533 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:36,712 - INFO       - Begin function declare_result
+2021-09-29 13:45:36,712 - INFO       - Returned: declare_result
+2021-09-29 13:45:36,713 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:36,713 - INFO       - Result of  match - 336025 is added
+2021-09-29 13:45:36,713 - INFO       - Match is Ended - 336025
+2021-09-29 13:45:36,713 - INFO       - Match Start  336026
+2021-09-29 13:45:36,714 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:36,907 - INFO       - Begin function declare_result
+2021-09-29 13:45:36,907 - INFO       - Returned: declare_result
+2021-09-29 13:45:36,907 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:36,907 - INFO       - Result of  match - 336026 is added
+2021-09-29 13:45:36,907 - INFO       - Match is Ended - 336026
+2021-09-29 13:45:36,908 - INFO       - Match Start  336027
+2021-09-29 13:45:36,909 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:37,102 - INFO       - Begin function declare_result
+2021-09-29 13:45:37,102 - INFO       - Returned: declare_result
+2021-09-29 13:45:37,103 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:37,103 - INFO       - Result of  match - 336027 is added
+2021-09-29 13:45:37,103 - INFO       - Match is Ended - 336027
+2021-09-29 13:45:37,103 - INFO       - Match Start  336028
+2021-09-29 13:45:37,104 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:37,298 - INFO       - Begin function declare_result
+2021-09-29 13:45:37,298 - INFO       - Returned: declare_result
+2021-09-29 13:45:37,299 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:37,299 - INFO       - Result of  match - 336028 is added
+2021-09-29 13:45:37,299 - INFO       - Match is Ended - 336028
+2021-09-29 13:45:37,299 - INFO       - Match Start  336029
+2021-09-29 13:45:37,300 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:37,494 - INFO       - Begin function declare_result
+2021-09-29 13:45:37,494 - INFO       - Returned: declare_result
+2021-09-29 13:45:37,494 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:37,494 - INFO       - Result of  match - 336029 is added
+2021-09-29 13:45:37,494 - INFO       - Match is Ended - 336029
+2021-09-29 13:45:37,494 - INFO       - Match Start  336031
+2021-09-29 13:45:37,495 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:37,686 - INFO       - Begin function declare_result
+2021-09-29 13:45:37,686 - INFO       - Returned: declare_result
+2021-09-29 13:45:37,686 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:37,686 - INFO       - Result of  match - 336031 is added
+2021-09-29 13:45:37,686 - INFO       - Match is Ended - 336031
+2021-09-29 13:45:37,686 - INFO       - Match Start  336032
+2021-09-29 13:45:37,687 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:37,873 - INFO       - Begin function declare_result
+2021-09-29 13:45:37,873 - INFO       - Returned: declare_result
+2021-09-29 13:45:37,873 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:37,874 - INFO       - Result of  match - 336032 is added
+2021-09-29 13:45:37,874 - INFO       - Match is Ended - 336032
+2021-09-29 13:45:37,874 - INFO       - Match Start  336033
+2021-09-29 13:45:37,875 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:38,059 - INFO       - Begin function declare_result
+2021-09-29 13:45:38,060 - INFO       - Returned: declare_result
+2021-09-29 13:45:38,060 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:38,060 - INFO       - Result of  match - 336033 is added
+2021-09-29 13:45:38,060 - INFO       - Match is Ended - 336033
+2021-09-29 13:45:38,060 - INFO       - Match Start  336034
+2021-09-29 13:45:38,061 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:38,269 - INFO       - Begin function declare_result
+2021-09-29 13:45:38,269 - INFO       - Returned: declare_result
+2021-09-29 13:45:38,269 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:38,269 - INFO       - Result of  match - 336034 is added
+2021-09-29 13:45:38,269 - INFO       - Match is Ended - 336034
+2021-09-29 13:45:38,269 - INFO       - Match Start  336035
+2021-09-29 13:45:38,270 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:38,461 - INFO       - Begin function declare_result
+2021-09-29 13:45:38,461 - INFO       - Returned: declare_result
+2021-09-29 13:45:38,461 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:38,461 - INFO       - Result of  match - 336035 is added
+2021-09-29 13:45:38,461 - INFO       - Match is Ended - 336035
+2021-09-29 13:45:38,461 - INFO       - Match Start  336036
+2021-09-29 13:45:38,462 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:38,675 - INFO       - Begin function declare_result
+2021-09-29 13:45:38,676 - INFO       - Returned: declare_result
+2021-09-29 13:45:38,676 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:38,676 - INFO       - Result of  match - 336036 is added
+2021-09-29 13:45:38,676 - INFO       - Match is Ended - 336036
+2021-09-29 13:45:38,676 - INFO       - Match Start  336037
+2021-09-29 13:45:38,677 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:38,872 - INFO       - Begin function declare_result
+2021-09-29 13:45:38,872 - INFO       - Returned: declare_result
+2021-09-29 13:45:38,872 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:38,872 - INFO       - Result of  match - 336037 is added
+2021-09-29 13:45:38,872 - INFO       - Match is Ended - 336037
+2021-09-29 13:45:38,873 - INFO       - Match Start  336038
+2021-09-29 13:45:38,874 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:39,063 - INFO       - Begin function declare_result
+2021-09-29 13:45:39,063 - INFO       - Returned: declare_result
+2021-09-29 13:45:39,063 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:39,063 - INFO       - Result of  match - 336038 is added
+2021-09-29 13:45:39,063 - INFO       - Match is Ended - 336038
+2021-09-29 13:45:39,063 - INFO       - Match Start  336039
+2021-09-29 13:45:39,065 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:39,262 - INFO       - Begin function declare_result
+2021-09-29 13:45:39,262 - INFO       - Returned: declare_result
+2021-09-29 13:45:39,262 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:39,262 - INFO       - Result of  match - 336039 is added
+2021-09-29 13:45:39,262 - INFO       - Match is Ended - 336039
+2021-09-29 13:45:39,262 - INFO       - Match Start  336040
+2021-09-29 13:45:39,263 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:39,467 - INFO       - Begin function declare_result
+2021-09-29 13:45:39,467 - INFO       - Returned: declare_result
+2021-09-29 13:45:39,467 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:39,467 - INFO       - Result of  match - 336040 is added
+2021-09-29 13:45:39,467 - INFO       - Match is Ended - 336040
+2021-09-29 13:45:39,467 - INFO       - Match Start  392181
+2021-09-29 13:45:39,468 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:39,737 - INFO       - Begin function declare_result
+2021-09-29 13:45:39,737 - INFO       - Returned: declare_result
+2021-09-29 13:45:39,737 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:39,737 - INFO       - Result of  match - 392181 is added
+2021-09-29 13:45:39,737 - INFO       - Match is Ended - 392181
+2021-09-29 13:45:39,737 - INFO       - Match Start  392182
+2021-09-29 13:45:39,739 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:39,981 - INFO       - Begin function declare_result
+2021-09-29 13:45:39,981 - INFO       - Returned: declare_result
+2021-09-29 13:45:39,981 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:39,981 - INFO       - Result of  match - 392182 is added
+2021-09-29 13:45:39,981 - INFO       - Match is Ended - 392182
+2021-09-29 13:45:39,981 - INFO       - Match Start  392183
+2021-09-29 13:45:39,983 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:40,169 - INFO       - Begin function declare_result
+2021-09-29 13:45:40,169 - INFO       - Returned: declare_result
+2021-09-29 13:45:40,169 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:40,169 - INFO       - Result of  match - 392183 is added
+2021-09-29 13:45:40,169 - INFO       - Match is Ended - 392183
+2021-09-29 13:45:40,169 - INFO       - Match Start  392184
+2021-09-29 13:45:40,171 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:40,380 - INFO       - Begin function declare_result
+2021-09-29 13:45:40,380 - INFO       - Returned: declare_result
+2021-09-29 13:45:40,380 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:40,380 - INFO       - Result of  match - 392184 is added
+2021-09-29 13:45:40,380 - INFO       - Match is Ended - 392184
+2021-09-29 13:45:40,381 - INFO       - Match Start  392185
+2021-09-29 13:45:40,382 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:40,637 - INFO       - Begin function declare_result
+2021-09-29 13:45:40,637 - INFO       - Returned: declare_result
+2021-09-29 13:45:40,637 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:40,637 - INFO       - Result of  match - 392185 is added
+2021-09-29 13:45:40,637 - INFO       - Match is Ended - 392185
+2021-09-29 13:45:40,637 - INFO       - Match Start  392186
+2021-09-29 13:45:40,638 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:40,871 - INFO       - Begin function declare_result
+2021-09-29 13:45:40,871 - INFO       - Returned: declare_result
+2021-09-29 13:45:40,871 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:40,871 - INFO       - Result of  match - 392186 is added
+2021-09-29 13:45:40,871 - INFO       - Match is Ended - 392186
+2021-09-29 13:45:40,871 - INFO       - Match Start  392188
+2021-09-29 13:45:40,872 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:41,105 - INFO       - Begin function declare_result
+2021-09-29 13:45:41,106 - INFO       - Returned: declare_result
+2021-09-29 13:45:41,106 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:41,106 - INFO       - Result of  match - 392188 is added
+2021-09-29 13:45:41,106 - INFO       - Match is Ended - 392188
+2021-09-29 13:45:41,106 - INFO       - Match Start  392189
+2021-09-29 13:45:41,107 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:41,289 - INFO       - Begin function declare_result
+2021-09-29 13:45:41,290 - INFO       - Returned: declare_result
+2021-09-29 13:45:41,290 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:41,290 - INFO       - Result of  match - 392189 is added
+2021-09-29 13:45:41,290 - INFO       - Match is Ended - 392189
+2021-09-29 13:45:41,290 - INFO       - Match Start  392190
+2021-09-29 13:45:41,291 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:41,583 - INFO       - Begin function declare_result
+2021-09-29 13:45:41,583 - INFO       - Returned: declare_result
+2021-09-29 13:45:41,598 - INFO       - Begin function declare_result
+2021-09-29 13:45:41,598 - INFO       - Returned: declare_result
+2021-09-29 13:45:41,598 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:41,599 - INFO       - Result of  match - 392190 is added
+2021-09-29 13:45:41,599 - INFO       - Match is Ended - 392190
+2021-09-29 13:45:41,599 - INFO       - Match Start  392191
+2021-09-29 13:45:41,600 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:41,836 - INFO       - Begin function declare_result
+2021-09-29 13:45:41,836 - INFO       - Returned: declare_result
+2021-09-29 13:45:41,836 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:41,837 - INFO       - Result of  match - 392191 is added
+2021-09-29 13:45:41,837 - INFO       - Match is Ended - 392191
+2021-09-29 13:45:41,837 - INFO       - Match Start  392192
+2021-09-29 13:45:41,838 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:42,075 - INFO       - Begin function declare_result
+2021-09-29 13:45:42,076 - INFO       - Returned: declare_result
+2021-09-29 13:45:42,076 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:42,076 - INFO       - Result of  match - 392192 is added
+2021-09-29 13:45:42,076 - INFO       - Match is Ended - 392192
+2021-09-29 13:45:42,076 - INFO       - Match Start  392194
+2021-09-29 13:45:42,077 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:42,293 - INFO       - Begin function declare_result
+2021-09-29 13:45:42,293 - INFO       - Returned: declare_result
+2021-09-29 13:45:42,293 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:42,293 - INFO       - Result of  match - 392194 is added
+2021-09-29 13:45:42,293 - INFO       - Match is Ended - 392194
+2021-09-29 13:45:42,293 - INFO       - Match Start  392195
+2021-09-29 13:45:42,294 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:42,458 - INFO       - Begin function declare_result
+2021-09-29 13:45:42,458 - INFO       - Returned: declare_result
+2021-09-29 13:45:42,458 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:42,458 - INFO       - Result of  match - 392195 is added
+2021-09-29 13:45:42,458 - INFO       - Match is Ended - 392195
+2021-09-29 13:45:42,458 - INFO       - Match Start  392196
+2021-09-29 13:45:42,459 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:42,678 - INFO       - Begin function declare_result
+2021-09-29 13:45:42,678 - INFO       - Returned: declare_result
+2021-09-29 13:45:42,678 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:42,679 - INFO       - Result of  match - 392196 is added
+2021-09-29 13:45:42,679 - INFO       - Match is Ended - 392196
+2021-09-29 13:45:42,679 - INFO       - Match Start  392197
+2021-09-29 13:45:42,680 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:42,859 - INFO       - Begin function declare_result
+2021-09-29 13:45:42,859 - INFO       - Returned: declare_result
+2021-09-29 13:45:42,860 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:42,860 - INFO       - Result of  match - 392197 is added
+2021-09-29 13:45:42,860 - INFO       - Match is Ended - 392197
+2021-09-29 13:45:42,860 - INFO       - Match Start  392198
+2021-09-29 13:45:42,861 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:43,014 - INFO       - Begin function declare_result
+2021-09-29 13:45:43,014 - INFO       - Returned: declare_result
+2021-09-29 13:45:43,015 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:43,015 - INFO       - Result of  match - 392198 is added
+2021-09-29 13:45:43,015 - INFO       - Match is Ended - 392198
+2021-09-29 13:45:43,015 - INFO       - Match Start  392199
+2021-09-29 13:45:43,016 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:43,226 - INFO       - Begin function declare_result
+2021-09-29 13:45:43,226 - INFO       - Returned: declare_result
+2021-09-29 13:45:43,226 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:43,226 - INFO       - Result of  match - 392199 is added
+2021-09-29 13:45:43,226 - INFO       - Match is Ended - 392199
+2021-09-29 13:45:43,226 - INFO       - Match Start  392200
+2021-09-29 13:45:43,228 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:43,457 - INFO       - Begin function declare_result
+2021-09-29 13:45:43,457 - INFO       - Returned: declare_result
+2021-09-29 13:45:43,457 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:43,457 - INFO       - Result of  match - 392200 is added
+2021-09-29 13:45:43,457 - INFO       - Match is Ended - 392200
+2021-09-29 13:45:43,457 - INFO       - Match Start  392201
+2021-09-29 13:45:43,459 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:43,677 - INFO       - Begin function declare_result
+2021-09-29 13:45:43,677 - INFO       - Returned: declare_result
+2021-09-29 13:45:43,677 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:43,677 - INFO       - Result of  match - 392201 is added
+2021-09-29 13:45:43,677 - INFO       - Match is Ended - 392201
+2021-09-29 13:45:43,677 - INFO       - Match Start  392202
+2021-09-29 13:45:43,678 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:43,846 - INFO       - Begin function declare_result
+2021-09-29 13:45:43,846 - INFO       - Returned: declare_result
+2021-09-29 13:45:43,846 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:43,846 - INFO       - Result of  match - 392202 is added
+2021-09-29 13:45:43,846 - INFO       - Match is Ended - 392202
+2021-09-29 13:45:43,847 - INFO       - Match Start  392203
+2021-09-29 13:45:43,848 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:44,048 - INFO       - Begin function declare_result
+2021-09-29 13:45:44,048 - INFO       - Returned: declare_result
+2021-09-29 13:45:44,048 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:44,048 - INFO       - Result of  match - 392203 is added
+2021-09-29 13:45:44,048 - INFO       - Match is Ended - 392203
+2021-09-29 13:45:44,048 - INFO       - Match Start  392204
+2021-09-29 13:45:44,049 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:44,302 - INFO       - Begin function declare_result
+2021-09-29 13:45:44,302 - INFO       - Returned: declare_result
+2021-09-29 13:45:44,302 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:44,302 - INFO       - Result of  match - 392204 is added
+2021-09-29 13:45:44,302 - INFO       - Match is Ended - 392204
+2021-09-29 13:45:44,302 - INFO       - Match Start  392205
+2021-09-29 13:45:44,303 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:44,510 - INFO       - Begin function declare_result
+2021-09-29 13:45:44,511 - INFO       - Returned: declare_result
+2021-09-29 13:45:44,511 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:44,511 - INFO       - Result of  match - 392205 is added
+2021-09-29 13:45:44,511 - INFO       - Match is Ended - 392205
+2021-09-29 13:45:44,511 - INFO       - Match Start  392206
+2021-09-29 13:45:44,512 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:44,720 - INFO       - Begin function declare_result
+2021-09-29 13:45:44,720 - INFO       - Returned: declare_result
+2021-09-29 13:45:44,720 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:44,720 - INFO       - Result of  match - 392206 is added
+2021-09-29 13:45:44,720 - INFO       - Match is Ended - 392206
+2021-09-29 13:45:44,720 - INFO       - Match Start  392207
+2021-09-29 13:45:44,721 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:44,894 - INFO       - Begin function declare_result
+2021-09-29 13:45:44,894 - INFO       - Returned: declare_result
+2021-09-29 13:45:44,894 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:44,894 - INFO       - Result of  match - 392207 is added
+2021-09-29 13:45:44,894 - INFO       - Match is Ended - 392207
+2021-09-29 13:45:44,894 - INFO       - Match Start  392208
+2021-09-29 13:45:44,895 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:45,223 - INFO       - Begin function declare_result
+2021-09-29 13:45:45,223 - INFO       - Returned: declare_result
+2021-09-29 13:45:45,224 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:45,224 - INFO       - Result of  match - 392208 is added
+2021-09-29 13:45:45,224 - INFO       - Match is Ended - 392208
+2021-09-29 13:45:45,224 - INFO       - Match Start  392209
+2021-09-29 13:45:45,225 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:45,467 - INFO       - Begin function declare_result
+2021-09-29 13:45:45,467 - INFO       - Returned: declare_result
+2021-09-29 13:45:45,467 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:45,467 - INFO       - Result of  match - 392209 is added
+2021-09-29 13:45:45,467 - INFO       - Match is Ended - 392209
+2021-09-29 13:45:45,467 - INFO       - Match Start  392210
+2021-09-29 13:45:45,468 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:45,690 - INFO       - Begin function declare_result
+2021-09-29 13:45:45,690 - INFO       - Returned: declare_result
+2021-09-29 13:45:45,690 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:45,690 - INFO       - Result of  match - 392210 is added
+2021-09-29 13:45:45,690 - INFO       - Match is Ended - 392210
+2021-09-29 13:45:45,690 - INFO       - Match Start  392211
+2021-09-29 13:45:45,692 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:45,878 - INFO       - Begin function declare_result
+2021-09-29 13:45:45,878 - INFO       - Returned: declare_result
+2021-09-29 13:45:45,878 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:45,879 - INFO       - Result of  match - 392211 is added
+2021-09-29 13:45:45,879 - INFO       - Match is Ended - 392211
+2021-09-29 13:45:45,879 - INFO       - Match Start  392212
+2021-09-29 13:45:45,880 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:46,136 - INFO       - Begin function declare_result
+2021-09-29 13:45:46,136 - INFO       - Returned: declare_result
+2021-09-29 13:45:46,136 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:46,136 - INFO       - Result of  match - 392212 is added
+2021-09-29 13:45:46,136 - INFO       - Match is Ended - 392212
+2021-09-29 13:45:46,136 - INFO       - Match Start  392213
+2021-09-29 13:45:46,137 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:46,364 - INFO       - Begin function declare_result
+2021-09-29 13:45:46,364 - INFO       - Returned: declare_result
+2021-09-29 13:45:46,364 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:46,365 - INFO       - Result of  match - 392213 is added
+2021-09-29 13:45:46,365 - INFO       - Match is Ended - 392213
+2021-09-29 13:45:46,365 - INFO       - Match Start  392214
+2021-09-29 13:45:46,366 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:46,589 - INFO       - Begin function declare_result
+2021-09-29 13:45:46,589 - INFO       - Returned: declare_result
+2021-09-29 13:45:46,589 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:46,589 - INFO       - Result of  match - 392214 is added
+2021-09-29 13:45:46,589 - INFO       - Match is Ended - 392214
+2021-09-29 13:45:46,589 - INFO       - Match Start  392215
+2021-09-29 13:45:46,590 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:46,851 - INFO       - Begin function declare_result
+2021-09-29 13:45:46,851 - INFO       - Returned: declare_result
+2021-09-29 13:45:46,851 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:46,851 - INFO       - Result of  match - 392215 is added
+2021-09-29 13:45:46,851 - INFO       - Match is Ended - 392215
+2021-09-29 13:45:46,852 - INFO       - Match Start  392216
+2021-09-29 13:45:46,854 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:47,108 - INFO       - Begin function declare_result
+2021-09-29 13:45:47,108 - INFO       - Returned: declare_result
+2021-09-29 13:45:47,108 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:47,108 - INFO       - Result of  match - 392216 is added
+2021-09-29 13:45:47,108 - INFO       - Match is Ended - 392216
+2021-09-29 13:45:47,108 - INFO       - Match Start  392217
+2021-09-29 13:45:47,110 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:47,317 - INFO       - Begin function declare_result
+2021-09-29 13:45:47,317 - INFO       - Returned: declare_result
+2021-09-29 13:45:47,317 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:47,317 - INFO       - Result of  match - 392217 is added
+2021-09-29 13:45:47,317 - INFO       - Match is Ended - 392217
+2021-09-29 13:45:47,318 - INFO       - Match Start  392218
+2021-09-29 13:45:47,319 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:47,693 - INFO       - Begin function declare_result
+2021-09-29 13:45:47,693 - INFO       - Returned: declare_result
+2021-09-29 13:45:47,693 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:47,693 - INFO       - Result of  match - 392218 is added
+2021-09-29 13:45:47,694 - INFO       - Match is Ended - 392218
+2021-09-29 13:45:47,694 - INFO       - Match Start  392219
+2021-09-29 13:45:47,695 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:47,870 - INFO       - Begin function declare_result
+2021-09-29 13:45:47,870 - INFO       - Returned: declare_result
+2021-09-29 13:45:47,870 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:47,870 - INFO       - Result of  match - 392219 is added
+2021-09-29 13:45:47,870 - INFO       - Match is Ended - 392219
+2021-09-29 13:45:47,870 - INFO       - Match Start  392220
+2021-09-29 13:45:47,871 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:48,105 - INFO       - Begin function declare_result
+2021-09-29 13:45:48,105 - INFO       - Returned: declare_result
+2021-09-29 13:45:48,105 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:48,105 - INFO       - Result of  match - 392220 is added
+2021-09-29 13:45:48,106 - INFO       - Match is Ended - 392220
+2021-09-29 13:45:48,106 - INFO       - Match Start  392221
+2021-09-29 13:45:48,107 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:48,386 - INFO       - Begin function declare_result
+2021-09-29 13:45:48,386 - INFO       - Returned: declare_result
+2021-09-29 13:45:48,386 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:48,386 - INFO       - Result of  match - 392221 is added
+2021-09-29 13:45:48,386 - INFO       - Match is Ended - 392221
+2021-09-29 13:45:48,386 - INFO       - Match Start  392222
+2021-09-29 13:45:48,388 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:48,678 - INFO       - Begin function declare_result
+2021-09-29 13:45:48,678 - INFO       - Returned: declare_result
+2021-09-29 13:45:48,678 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:48,678 - INFO       - Result of  match - 392222 is added
+2021-09-29 13:45:48,678 - INFO       - Match is Ended - 392222
+2021-09-29 13:45:48,678 - INFO       - Match Start  392223
+2021-09-29 13:45:48,680 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:48,934 - INFO       - Begin function declare_result
+2021-09-29 13:45:48,934 - INFO       - Returned: declare_result
+2021-09-29 13:45:48,934 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:48,934 - INFO       - Result of  match - 392223 is added
+2021-09-29 13:45:48,934 - INFO       - Match is Ended - 392223
+2021-09-29 13:45:48,934 - INFO       - Match Start  392224
+2021-09-29 13:45:48,936 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:49,202 - INFO       - Begin function declare_result
+2021-09-29 13:45:49,202 - INFO       - Returned: declare_result
+2021-09-29 13:45:49,203 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:49,203 - INFO       - Result of  match - 392224 is added
+2021-09-29 13:45:49,203 - INFO       - Match is Ended - 392224
+2021-09-29 13:45:49,203 - INFO       - Match Start  392225
+2021-09-29 13:45:49,204 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:49,497 - INFO       - Begin function declare_result
+2021-09-29 13:45:49,498 - INFO       - Returned: declare_result
+2021-09-29 13:45:49,498 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:49,498 - INFO       - Result of  match - 392225 is added
+2021-09-29 13:45:49,498 - INFO       - Match is Ended - 392225
+2021-09-29 13:45:49,498 - INFO       - Match Start  392226
+2021-09-29 13:45:49,500 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:49,721 - INFO       - Begin function declare_result
+2021-09-29 13:45:49,721 - INFO       - Returned: declare_result
+2021-09-29 13:45:49,721 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:49,721 - INFO       - Result of  match - 392226 is added
+2021-09-29 13:45:49,721 - INFO       - Match is Ended - 392226
+2021-09-29 13:45:49,721 - INFO       - Match Start  392227
+2021-09-29 13:45:49,722 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:50,032 - INFO       - Begin function declare_result
+2021-09-29 13:45:50,032 - INFO       - Returned: declare_result
+2021-09-29 13:45:50,032 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:50,032 - INFO       - Result of  match - 392227 is added
+2021-09-29 13:45:50,032 - INFO       - Match is Ended - 392227
+2021-09-29 13:45:50,032 - INFO       - Match Start  392228
+2021-09-29 13:45:50,034 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:50,345 - INFO       - Begin function declare_result
+2021-09-29 13:45:50,345 - INFO       - Returned: declare_result
+2021-09-29 13:45:50,345 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:50,345 - INFO       - Result of  match - 392228 is added
+2021-09-29 13:45:50,345 - INFO       - Match is Ended - 392228
+2021-09-29 13:45:50,346 - INFO       - Match Start  392229
+2021-09-29 13:45:50,348 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:50,613 - INFO       - Begin function declare_result
+2021-09-29 13:45:50,614 - INFO       - Returned: declare_result
+2021-09-29 13:45:50,614 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:50,614 - INFO       - Result of  match - 392229 is added
+2021-09-29 13:45:50,614 - INFO       - Match is Ended - 392229
+2021-09-29 13:45:50,614 - INFO       - Match Start  392230
+2021-09-29 13:45:50,616 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:50,929 - INFO       - Begin function declare_result
+2021-09-29 13:45:50,929 - INFO       - Returned: declare_result
+2021-09-29 13:45:50,929 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:50,930 - INFO       - Result of  match - 392230 is added
+2021-09-29 13:45:50,930 - INFO       - Match is Ended - 392230
+2021-09-29 13:45:50,930 - INFO       - Match Start  392231
+2021-09-29 13:45:50,931 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:51,288 - INFO       - Begin function declare_result
+2021-09-29 13:45:51,288 - INFO       - Returned: declare_result
+2021-09-29 13:45:51,288 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:51,288 - INFO       - Result of  match - 392231 is added
+2021-09-29 13:45:51,288 - INFO       - Match is Ended - 392231
+2021-09-29 13:45:51,288 - INFO       - Match Start  392232
+2021-09-29 13:45:51,290 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:51,550 - INFO       - Begin function declare_result
+2021-09-29 13:45:51,550 - INFO       - Returned: declare_result
+2021-09-29 13:45:51,550 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:51,551 - INFO       - Result of  match - 392232 is added
+2021-09-29 13:45:51,551 - INFO       - Match is Ended - 392232
+2021-09-29 13:45:51,551 - INFO       - Match Start  392233
+2021-09-29 13:45:51,552 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:51,750 - INFO       - Begin function declare_result
+2021-09-29 13:45:51,750 - INFO       - Returned: declare_result
+2021-09-29 13:45:51,750 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:51,750 - INFO       - Result of  match - 392233 is added
+2021-09-29 13:45:51,751 - INFO       - Match is Ended - 392233
+2021-09-29 13:45:51,751 - INFO       - Match Start  392234
+2021-09-29 13:45:51,752 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:51,975 - INFO       - Begin function declare_result
+2021-09-29 13:45:51,975 - INFO       - Returned: declare_result
+2021-09-29 13:45:51,975 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:51,975 - INFO       - Result of  match - 392234 is added
+2021-09-29 13:45:51,975 - INFO       - Match is Ended - 392234
+2021-09-29 13:45:51,975 - INFO       - Match Start  392235
+2021-09-29 13:45:51,976 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:52,220 - INFO       - Begin function declare_result
+2021-09-29 13:45:52,220 - INFO       - Returned: declare_result
+2021-09-29 13:45:52,220 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:52,220 - INFO       - Result of  match - 392235 is added
+2021-09-29 13:45:52,220 - INFO       - Match is Ended - 392235
+2021-09-29 13:45:52,220 - INFO       - Match Start  392236
+2021-09-29 13:45:52,221 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:52,501 - INFO       - Begin function declare_result
+2021-09-29 13:45:52,501 - INFO       - Returned: declare_result
+2021-09-29 13:45:52,501 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:52,502 - INFO       - Result of  match - 392236 is added
+2021-09-29 13:45:52,502 - INFO       - Match is Ended - 392236
+2021-09-29 13:45:52,502 - INFO       - Match Start  392237
+2021-09-29 13:45:52,503 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:52,790 - INFO       - Begin function declare_result
+2021-09-29 13:45:52,790 - INFO       - Returned: declare_result
+2021-09-29 13:45:52,791 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:52,791 - INFO       - Result of  match - 392237 is added
+2021-09-29 13:45:52,791 - INFO       - Match is Ended - 392237
+2021-09-29 13:45:52,791 - INFO       - Match Start  392238
+2021-09-29 13:45:52,792 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:53,069 - INFO       - Begin function declare_result
+2021-09-29 13:45:53,069 - INFO       - Returned: declare_result
+2021-09-29 13:45:53,069 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:53,069 - INFO       - Result of  match - 392238 is added
+2021-09-29 13:45:53,070 - INFO       - Match is Ended - 392238
+2021-09-29 13:45:53,070 - INFO       - Match Start  392239
+2021-09-29 13:45:53,071 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:53,385 - INFO       - Begin function declare_result
+2021-09-29 13:45:53,385 - INFO       - Returned: declare_result
+2021-09-29 13:45:53,385 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:53,385 - INFO       - Result of  match - 392239 is added
+2021-09-29 13:45:53,385 - INFO       - Match is Ended - 392239
+2021-09-29 13:45:53,385 - INFO       - Match Start  419106
+2021-09-29 13:45:53,386 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:53,632 - INFO       - Begin function declare_result
+2021-09-29 13:45:53,632 - INFO       - Returned: declare_result
+2021-09-29 13:45:53,632 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:53,632 - INFO       - Result of  match - 419106 is added
+2021-09-29 13:45:53,632 - INFO       - Match is Ended - 419106
+2021-09-29 13:45:53,632 - INFO       - Match Start  419107
+2021-09-29 13:45:53,634 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:53,931 - INFO       - Begin function declare_result
+2021-09-29 13:45:53,932 - INFO       - Returned: declare_result
+2021-09-29 13:45:53,932 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:53,932 - INFO       - Result of  match - 419107 is added
+2021-09-29 13:45:53,932 - INFO       - Match is Ended - 419107
+2021-09-29 13:45:53,932 - INFO       - Match Start  419108
+2021-09-29 13:45:53,933 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:54,188 - INFO       - Begin function declare_result
+2021-09-29 13:45:54,188 - INFO       - Returned: declare_result
+2021-09-29 13:45:54,188 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:54,189 - INFO       - Result of  match - 419108 is added
+2021-09-29 13:45:54,189 - INFO       - Match is Ended - 419108
+2021-09-29 13:45:54,189 - INFO       - Match Start  419109
+2021-09-29 13:45:54,190 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:54,456 - INFO       - Begin function declare_result
+2021-09-29 13:45:54,457 - INFO       - Returned: declare_result
+2021-09-29 13:45:54,457 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:54,457 - INFO       - Result of  match - 419109 is added
+2021-09-29 13:45:54,457 - INFO       - Match is Ended - 419109
+2021-09-29 13:45:54,457 - INFO       - Match Start  419110
+2021-09-29 13:45:54,458 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:54,785 - INFO       - Begin function declare_result
+2021-09-29 13:45:54,786 - INFO       - Returned: declare_result
+2021-09-29 13:45:54,786 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:54,786 - INFO       - Result of  match - 419110 is added
+2021-09-29 13:45:54,786 - INFO       - Match is Ended - 419110
+2021-09-29 13:45:54,786 - INFO       - Match Start  419111
+2021-09-29 13:45:54,787 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:55,011 - INFO       - Begin function declare_result
+2021-09-29 13:45:55,012 - INFO       - Returned: declare_result
+2021-09-29 13:45:55,012 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:55,012 - INFO       - Result of  match - 419111 is added
+2021-09-29 13:45:55,012 - INFO       - Match is Ended - 419111
+2021-09-29 13:45:55,012 - INFO       - Match Start  419112
+2021-09-29 13:45:55,014 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:55,352 - INFO       - Begin function declare_result
+2021-09-29 13:45:55,352 - INFO       - Returned: declare_result
+2021-09-29 13:45:55,352 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:55,353 - INFO       - Result of  match - 419112 is added
+2021-09-29 13:45:55,353 - INFO       - Match is Ended - 419112
+2021-09-29 13:45:55,353 - INFO       - Match Start  419113
+2021-09-29 13:45:55,354 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:55,609 - INFO       - Begin function declare_result
+2021-09-29 13:45:55,609 - INFO       - Returned: declare_result
+2021-09-29 13:45:55,609 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:55,609 - INFO       - Result of  match - 419113 is added
+2021-09-29 13:45:55,609 - INFO       - Match is Ended - 419113
+2021-09-29 13:45:55,609 - INFO       - Match Start  419114
+2021-09-29 13:45:55,610 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:55,885 - INFO       - Begin function declare_result
+2021-09-29 13:45:55,886 - INFO       - Returned: declare_result
+2021-09-29 13:45:55,886 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:55,886 - INFO       - Result of  match - 419114 is added
+2021-09-29 13:45:55,886 - INFO       - Match is Ended - 419114
+2021-09-29 13:45:55,886 - INFO       - Match Start  419115
+2021-09-29 13:45:55,887 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:56,201 - INFO       - Begin function declare_result
+2021-09-29 13:45:56,201 - INFO       - Returned: declare_result
+2021-09-29 13:45:56,201 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:56,201 - INFO       - Result of  match - 419115 is added
+2021-09-29 13:45:56,201 - INFO       - Match is Ended - 419115
+2021-09-29 13:45:56,201 - INFO       - Match Start  419116
+2021-09-29 13:45:56,203 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:56,438 - INFO       - Begin function declare_result
+2021-09-29 13:45:56,438 - INFO       - Returned: declare_result
+2021-09-29 13:45:56,438 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:56,438 - INFO       - Result of  match - 419116 is added
+2021-09-29 13:45:56,439 - INFO       - Match is Ended - 419116
+2021-09-29 13:45:56,439 - INFO       - Match Start  419117
+2021-09-29 13:45:56,440 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:56,767 - INFO       - Begin function declare_result
+2021-09-29 13:45:56,767 - INFO       - Returned: declare_result
+2021-09-29 13:45:56,767 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:56,767 - INFO       - Result of  match - 419117 is added
+2021-09-29 13:45:56,767 - INFO       - Match is Ended - 419117
+2021-09-29 13:45:56,767 - INFO       - Match Start  419118
+2021-09-29 13:45:56,768 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:57,027 - INFO       - Begin function declare_result
+2021-09-29 13:45:57,027 - INFO       - Returned: declare_result
+2021-09-29 13:45:57,027 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:57,027 - INFO       - Result of  match - 419118 is added
+2021-09-29 13:45:57,028 - INFO       - Match is Ended - 419118
+2021-09-29 13:45:57,028 - INFO       - Match Start  419119
+2021-09-29 13:45:57,029 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:57,392 - INFO       - Begin function declare_result
+2021-09-29 13:45:57,392 - INFO       - Returned: declare_result
+2021-09-29 13:45:57,392 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:57,392 - INFO       - Result of  match - 419119 is added
+2021-09-29 13:45:57,393 - INFO       - Match is Ended - 419119
+2021-09-29 13:45:57,393 - INFO       - Match Start  419120
+2021-09-29 13:45:57,394 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:57,667 - INFO       - Begin function declare_result
+2021-09-29 13:45:57,667 - INFO       - Returned: declare_result
+2021-09-29 13:45:57,667 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:57,667 - INFO       - Result of  match - 419120 is added
+2021-09-29 13:45:57,667 - INFO       - Match is Ended - 419120
+2021-09-29 13:45:57,667 - INFO       - Match Start  419121
+2021-09-29 13:45:57,668 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:57,920 - INFO       - Begin function declare_result
+2021-09-29 13:45:57,920 - INFO       - Returned: declare_result
+2021-09-29 13:45:57,943 - INFO       - Begin function declare_result
+2021-09-29 13:45:57,943 - INFO       - Returned: declare_result
+2021-09-29 13:45:57,943 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:57,944 - INFO       - Result of  match - 419121 is added
+2021-09-29 13:45:57,944 - INFO       - Match is Ended - 419121
+2021-09-29 13:45:57,944 - INFO       - Match Start  419122
+2021-09-29 13:45:57,945 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:58,260 - INFO       - Begin function declare_result
+2021-09-29 13:45:58,261 - INFO       - Returned: declare_result
+2021-09-29 13:45:58,261 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:58,261 - INFO       - Result of  match - 419122 is added
+2021-09-29 13:45:58,261 - INFO       - Match is Ended - 419122
+2021-09-29 13:45:58,261 - INFO       - Match Start  419123
+2021-09-29 13:45:58,262 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:58,477 - INFO       - Begin function declare_result
+2021-09-29 13:45:58,478 - INFO       - Returned: declare_result
+2021-09-29 13:45:58,478 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:58,478 - INFO       - Result of  match - 419123 is added
+2021-09-29 13:45:58,478 - INFO       - Match is Ended - 419123
+2021-09-29 13:45:58,478 - INFO       - Match Start  419124
+2021-09-29 13:45:58,480 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:58,729 - INFO       - Begin function declare_result
+2021-09-29 13:45:58,729 - INFO       - Returned: declare_result
+2021-09-29 13:45:58,729 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:58,729 - INFO       - Result of  match - 419124 is added
+2021-09-29 13:45:58,729 - INFO       - Match is Ended - 419124
+2021-09-29 13:45:58,729 - INFO       - Match Start  419125
+2021-09-29 13:45:58,731 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:58,961 - INFO       - Begin function declare_result
+2021-09-29 13:45:58,961 - INFO       - Returned: declare_result
+2021-09-29 13:45:58,962 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:58,962 - INFO       - Result of  match - 419125 is added
+2021-09-29 13:45:58,962 - INFO       - Match is Ended - 419125
+2021-09-29 13:45:58,962 - INFO       - Match Start  419126
+2021-09-29 13:45:58,963 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:59,251 - INFO       - Begin function declare_result
+2021-09-29 13:45:59,252 - INFO       - Returned: declare_result
+2021-09-29 13:45:59,252 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:59,252 - INFO       - Result of  match - 419126 is added
+2021-09-29 13:45:59,252 - INFO       - Match is Ended - 419126
+2021-09-29 13:45:59,252 - INFO       - Match Start  419127
+2021-09-29 13:45:59,253 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:59,489 - INFO       - Begin function declare_result
+2021-09-29 13:45:59,489 - INFO       - Returned: declare_result
+2021-09-29 13:45:59,489 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:59,489 - INFO       - Result of  match - 419127 is added
+2021-09-29 13:45:59,490 - INFO       - Match is Ended - 419127
+2021-09-29 13:45:59,490 - INFO       - Match Start  419128
+2021-09-29 13:45:59,491 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:59,770 - INFO       - Begin function declare_result
+2021-09-29 13:45:59,770 - INFO       - Returned: declare_result
+2021-09-29 13:45:59,770 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:59,771 - INFO       - Result of  match - 419128 is added
+2021-09-29 13:45:59,771 - INFO       - Match is Ended - 419128
+2021-09-29 13:45:59,771 - INFO       - Match Start  419129
+2021-09-29 13:45:59,772 - INFO       - Begin function create_scoreboard
+2021-09-29 13:45:59,973 - INFO       - Begin function declare_result
+2021-09-29 13:45:59,974 - INFO       - Returned: declare_result
+2021-09-29 13:45:59,974 - INFO       - Returned: create_scoreboard
+2021-09-29 13:45:59,974 - INFO       - Result of  match - 419129 is added
+2021-09-29 13:45:59,974 - INFO       - Match is Ended - 419129
+2021-09-29 13:45:59,974 - INFO       - Match Start  419130
+2021-09-29 13:45:59,975 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:00,330 - INFO       - Begin function declare_result
+2021-09-29 13:46:00,330 - INFO       - Returned: declare_result
+2021-09-29 13:46:00,330 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:00,331 - INFO       - Result of  match - 419130 is added
+2021-09-29 13:46:00,331 - INFO       - Match is Ended - 419130
+2021-09-29 13:46:00,331 - INFO       - Match Start  419131
+2021-09-29 13:46:00,332 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:00,623 - INFO       - Begin function declare_result
+2021-09-29 13:46:00,624 - INFO       - Returned: declare_result
+2021-09-29 13:46:00,624 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:00,624 - INFO       - Result of  match - 419131 is added
+2021-09-29 13:46:00,624 - INFO       - Match is Ended - 419131
+2021-09-29 13:46:00,624 - INFO       - Match Start  419132
+2021-09-29 13:46:00,626 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:00,881 - INFO       - Begin function declare_result
+2021-09-29 13:46:00,881 - INFO       - Returned: declare_result
+2021-09-29 13:46:00,882 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:00,882 - INFO       - Result of  match - 419132 is added
+2021-09-29 13:46:00,882 - INFO       - Match is Ended - 419132
+2021-09-29 13:46:00,882 - INFO       - Match Start  419133
+2021-09-29 13:46:00,883 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:01,141 - INFO       - Begin function declare_result
+2021-09-29 13:46:01,141 - INFO       - Returned: declare_result
+2021-09-29 13:46:01,142 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:01,142 - INFO       - Result of  match - 419133 is added
+2021-09-29 13:46:01,142 - INFO       - Match is Ended - 419133
+2021-09-29 13:46:01,142 - INFO       - Match Start  419134
+2021-09-29 13:46:01,144 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:01,416 - INFO       - Begin function declare_result
+2021-09-29 13:46:01,417 - INFO       - Returned: declare_result
+2021-09-29 13:46:01,417 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:01,417 - INFO       - Result of  match - 419134 is added
+2021-09-29 13:46:01,417 - INFO       - Match is Ended - 419134
+2021-09-29 13:46:01,417 - INFO       - Match Start  419135
+2021-09-29 13:46:01,418 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:01,695 - INFO       - Begin function declare_result
+2021-09-29 13:46:01,695 - INFO       - Returned: declare_result
+2021-09-29 13:46:01,696 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:01,696 - INFO       - Result of  match - 419135 is added
+2021-09-29 13:46:01,696 - INFO       - Match is Ended - 419135
+2021-09-29 13:46:01,696 - INFO       - Match Start  419136
+2021-09-29 13:46:01,697 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:01,922 - INFO       - Begin function declare_result
+2021-09-29 13:46:01,922 - INFO       - Returned: declare_result
+2021-09-29 13:46:01,922 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:01,922 - INFO       - Result of  match - 419136 is added
+2021-09-29 13:46:01,923 - INFO       - Match is Ended - 419136
+2021-09-29 13:46:01,923 - INFO       - Match Start  419137
+2021-09-29 13:46:01,924 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:02,173 - INFO       - Begin function declare_result
+2021-09-29 13:46:02,174 - INFO       - Returned: declare_result
+2021-09-29 13:46:02,174 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:02,174 - INFO       - Result of  match - 419137 is added
+2021-09-29 13:46:02,174 - INFO       - Match is Ended - 419137
+2021-09-29 13:46:02,174 - INFO       - Match Start  419138
+2021-09-29 13:46:02,176 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:02,481 - INFO       - Begin function declare_result
+2021-09-29 13:46:02,481 - INFO       - Returned: declare_result
+2021-09-29 13:46:02,481 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:02,482 - INFO       - Result of  match - 419138 is added
+2021-09-29 13:46:02,482 - INFO       - Match is Ended - 419138
+2021-09-29 13:46:02,482 - INFO       - Match Start  419139
+2021-09-29 13:46:02,483 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:02,703 - INFO       - Begin function declare_result
+2021-09-29 13:46:02,703 - INFO       - Returned: declare_result
+2021-09-29 13:46:02,703 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:02,703 - INFO       - Result of  match - 419139 is added
+2021-09-29 13:46:02,703 - INFO       - Match is Ended - 419139
+2021-09-29 13:46:02,703 - INFO       - Match Start  419140
+2021-09-29 13:46:02,705 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:02,987 - INFO       - Begin function declare_result
+2021-09-29 13:46:02,987 - INFO       - Returned: declare_result
+2021-09-29 13:46:02,987 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:02,987 - INFO       - Result of  match - 419140 is added
+2021-09-29 13:46:02,987 - INFO       - Match is Ended - 419140
+2021-09-29 13:46:02,987 - INFO       - Match Start  419141
+2021-09-29 13:46:02,989 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:03,393 - INFO       - Begin function declare_result
+2021-09-29 13:46:03,394 - INFO       - Returned: declare_result
+2021-09-29 13:46:03,394 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:03,394 - INFO       - Result of  match - 419141 is added
+2021-09-29 13:46:03,394 - INFO       - Match is Ended - 419141
+2021-09-29 13:46:03,394 - INFO       - Match Start  419142
+2021-09-29 13:46:03,396 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:03,648 - INFO       - Begin function declare_result
+2021-09-29 13:46:03,649 - INFO       - Returned: declare_result
+2021-09-29 13:46:03,649 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:03,649 - INFO       - Result of  match - 419142 is added
+2021-09-29 13:46:03,649 - INFO       - Match is Ended - 419142
+2021-09-29 13:46:03,649 - INFO       - Match Start  419143
+2021-09-29 13:46:03,651 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:03,889 - INFO       - Begin function declare_result
+2021-09-29 13:46:03,890 - INFO       - Returned: declare_result
+2021-09-29 13:46:03,890 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:03,890 - INFO       - Result of  match - 419143 is added
+2021-09-29 13:46:03,890 - INFO       - Match is Ended - 419143
+2021-09-29 13:46:03,890 - INFO       - Match Start  419144
+2021-09-29 13:46:03,891 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:04,190 - INFO       - Begin function declare_result
+2021-09-29 13:46:04,190 - INFO       - Returned: declare_result
+2021-09-29 13:46:04,190 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:04,191 - INFO       - Result of  match - 419144 is added
+2021-09-29 13:46:04,191 - INFO       - Match is Ended - 419144
+2021-09-29 13:46:04,191 - INFO       - Match Start  419145
+2021-09-29 13:46:04,192 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:04,510 - INFO       - Begin function declare_result
+2021-09-29 13:46:04,510 - INFO       - Returned: declare_result
+2021-09-29 13:46:04,511 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:04,511 - INFO       - Result of  match - 419145 is added
+2021-09-29 13:46:04,511 - INFO       - Match is Ended - 419145
+2021-09-29 13:46:04,511 - INFO       - Match Start  419146
+2021-09-29 13:46:04,513 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:04,814 - INFO       - Begin function declare_result
+2021-09-29 13:46:04,814 - INFO       - Returned: declare_result
+2021-09-29 13:46:04,815 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:04,815 - INFO       - Result of  match - 419146 is added
+2021-09-29 13:46:04,815 - INFO       - Match is Ended - 419146
+2021-09-29 13:46:04,815 - INFO       - Match Start  419147
+2021-09-29 13:46:04,816 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:05,058 - INFO       - Begin function declare_result
+2021-09-29 13:46:05,058 - INFO       - Returned: declare_result
+2021-09-29 13:46:05,058 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:05,058 - INFO       - Result of  match - 419147 is added
+2021-09-29 13:46:05,058 - INFO       - Match is Ended - 419147
+2021-09-29 13:46:05,059 - INFO       - Match Start  419148
+2021-09-29 13:46:05,060 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:05,379 - INFO       - Begin function declare_result
+2021-09-29 13:46:05,379 - INFO       - Returned: declare_result
+2021-09-29 13:46:05,379 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:05,379 - INFO       - Result of  match - 419148 is added
+2021-09-29 13:46:05,379 - INFO       - Match is Ended - 419148
+2021-09-29 13:46:05,379 - INFO       - Match Start  419149
+2021-09-29 13:46:05,381 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:05,628 - INFO       - Begin function declare_result
+2021-09-29 13:46:05,628 - INFO       - Returned: declare_result
+2021-09-29 13:46:05,629 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:05,629 - INFO       - Result of  match - 419149 is added
+2021-09-29 13:46:05,629 - INFO       - Match is Ended - 419149
+2021-09-29 13:46:05,629 - INFO       - Match Start  419150
+2021-09-29 13:46:05,630 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:05,957 - INFO       - Begin function declare_result
+2021-09-29 13:46:05,958 - INFO       - Returned: declare_result
+2021-09-29 13:46:05,958 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:05,959 - INFO       - Result of  match - 419150 is added
+2021-09-29 13:46:05,959 - INFO       - Match is Ended - 419150
+2021-09-29 13:46:05,959 - INFO       - Match Start  419151
+2021-09-29 13:46:05,961 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:06,302 - INFO       - Begin function declare_result
+2021-09-29 13:46:06,302 - INFO       - Returned: declare_result
+2021-09-29 13:46:06,302 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:06,302 - INFO       - Result of  match - 419151 is added
+2021-09-29 13:46:06,302 - INFO       - Match is Ended - 419151
+2021-09-29 13:46:06,302 - INFO       - Match Start  419152
+2021-09-29 13:46:06,304 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:06,640 - INFO       - Begin function declare_result
+2021-09-29 13:46:06,641 - INFO       - Returned: declare_result
+2021-09-29 13:46:06,641 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:06,641 - INFO       - Result of  match - 419152 is added
+2021-09-29 13:46:06,641 - INFO       - Match is Ended - 419152
+2021-09-29 13:46:06,642 - INFO       - Match Start  419153
+2021-09-29 13:46:06,643 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:06,883 - INFO       - Begin function declare_result
+2021-09-29 13:46:06,884 - INFO       - Returned: declare_result
+2021-09-29 13:46:06,884 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:06,884 - INFO       - Result of  match - 419153 is added
+2021-09-29 13:46:06,884 - INFO       - Match is Ended - 419153
+2021-09-29 13:46:06,884 - INFO       - Match Start  419154
+2021-09-29 13:46:06,885 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:07,230 - INFO       - Begin function declare_result
+2021-09-29 13:46:07,230 - INFO       - Returned: declare_result
+2021-09-29 13:46:07,230 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:07,230 - INFO       - Result of  match - 419154 is added
+2021-09-29 13:46:07,230 - INFO       - Match is Ended - 419154
+2021-09-29 13:46:07,231 - INFO       - Match Start  419155
+2021-09-29 13:46:07,232 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:07,469 - INFO       - Begin function declare_result
+2021-09-29 13:46:07,469 - INFO       - Returned: declare_result
+2021-09-29 13:46:07,470 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:07,470 - INFO       - Result of  match - 419155 is added
+2021-09-29 13:46:07,470 - INFO       - Match is Ended - 419155
+2021-09-29 13:46:07,470 - INFO       - Match Start  419156
+2021-09-29 13:46:07,471 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:07,727 - INFO       - Begin function declare_result
+2021-09-29 13:46:07,727 - INFO       - Returned: declare_result
+2021-09-29 13:46:07,728 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:07,728 - INFO       - Result of  match - 419156 is added
+2021-09-29 13:46:07,728 - INFO       - Match is Ended - 419156
+2021-09-29 13:46:07,728 - INFO       - Match Start  419157
+2021-09-29 13:46:07,729 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:08,092 - INFO       - Begin function declare_result
+2021-09-29 13:46:08,092 - INFO       - Returned: declare_result
+2021-09-29 13:46:08,092 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:08,092 - INFO       - Result of  match - 419157 is added
+2021-09-29 13:46:08,093 - INFO       - Match is Ended - 419157
+2021-09-29 13:46:08,093 - INFO       - Match Start  419158
+2021-09-29 13:46:08,094 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:08,372 - INFO       - Begin function declare_result
+2021-09-29 13:46:08,373 - INFO       - Returned: declare_result
+2021-09-29 13:46:08,373 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:08,373 - INFO       - Result of  match - 419158 is added
+2021-09-29 13:46:08,373 - INFO       - Match is Ended - 419158
+2021-09-29 13:46:08,373 - INFO       - Match Start  419159
+2021-09-29 13:46:08,375 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:08,558 - INFO       - Begin function declare_result
+2021-09-29 13:46:08,559 - INFO       - Returned: declare_result
+2021-09-29 13:46:08,559 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:08,559 - INFO       - Result of  match - 419159 is added
+2021-09-29 13:46:08,559 - INFO       - Match is Ended - 419159
+2021-09-29 13:46:08,559 - INFO       - Match Start  419160
+2021-09-29 13:46:08,561 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:08,836 - INFO       - Begin function declare_result
+2021-09-29 13:46:08,836 - INFO       - Returned: declare_result
+2021-09-29 13:46:08,836 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:08,836 - INFO       - Result of  match - 419160 is added
+2021-09-29 13:46:08,836 - INFO       - Match is Ended - 419160
+2021-09-29 13:46:08,836 - INFO       - Match Start  419161
+2021-09-29 13:46:08,838 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:09,138 - INFO       - Begin function declare_result
+2021-09-29 13:46:09,138 - INFO       - Returned: declare_result
+2021-09-29 13:46:09,139 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:09,139 - INFO       - Result of  match - 419161 is added
+2021-09-29 13:46:09,139 - INFO       - Match is Ended - 419161
+2021-09-29 13:46:09,139 - INFO       - Match Start  419162
+2021-09-29 13:46:09,140 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:09,473 - INFO       - Begin function declare_result
+2021-09-29 13:46:09,474 - INFO       - Returned: declare_result
+2021-09-29 13:46:09,474 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:09,474 - INFO       - Result of  match - 419162 is added
+2021-09-29 13:46:09,474 - INFO       - Match is Ended - 419162
+2021-09-29 13:46:09,474 - INFO       - Match Start  419163
+2021-09-29 13:46:09,475 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:09,722 - INFO       - Begin function declare_result
+2021-09-29 13:46:09,722 - INFO       - Returned: declare_result
+2021-09-29 13:46:09,722 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:09,723 - INFO       - Result of  match - 419163 is added
+2021-09-29 13:46:09,723 - INFO       - Match is Ended - 419163
+2021-09-29 13:46:09,723 - INFO       - Match Start  419164
+2021-09-29 13:46:09,724 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:10,038 - INFO       - Begin function declare_result
+2021-09-29 13:46:10,038 - INFO       - Returned: declare_result
+2021-09-29 13:46:10,039 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:10,039 - INFO       - Result of  match - 419164 is added
+2021-09-29 13:46:10,039 - INFO       - Match is Ended - 419164
+2021-09-29 13:46:10,039 - INFO       - Match Start  419165
+2021-09-29 13:46:10,040 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:10,304 - INFO       - Begin function declare_result
+2021-09-29 13:46:10,304 - INFO       - Returned: declare_result
+2021-09-29 13:46:10,304 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:10,304 - INFO       - Result of  match - 419165 is added
+2021-09-29 13:46:10,304 - INFO       - Match is Ended - 419165
+2021-09-29 13:46:10,304 - INFO       - Match Start  501198
+2021-09-29 13:46:10,306 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:10,565 - INFO       - Begin function declare_result
+2021-09-29 13:46:10,565 - INFO       - Returned: declare_result
+2021-09-29 13:46:10,565 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:10,566 - INFO       - Result of  match - 501198 is added
+2021-09-29 13:46:10,566 - INFO       - Match is Ended - 501198
+2021-09-29 13:46:10,566 - INFO       - Match Start  501199
+2021-09-29 13:46:10,567 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:10,967 - INFO       - Begin function declare_result
+2021-09-29 13:46:10,967 - INFO       - Returned: declare_result
+2021-09-29 13:46:10,967 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:10,967 - INFO       - Result of  match - 501199 is added
+2021-09-29 13:46:10,967 - INFO       - Match is Ended - 501199
+2021-09-29 13:46:10,967 - INFO       - Match Start  501200
+2021-09-29 13:46:10,968 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:11,217 - INFO       - Begin function declare_result
+2021-09-29 13:46:11,217 - INFO       - Returned: declare_result
+2021-09-29 13:46:11,217 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:11,218 - INFO       - Result of  match - 501200 is added
+2021-09-29 13:46:11,218 - INFO       - Match is Ended - 501200
+2021-09-29 13:46:11,218 - INFO       - Match Start  501201
+2021-09-29 13:46:11,219 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:11,595 - INFO       - Begin function declare_result
+2021-09-29 13:46:11,595 - INFO       - Returned: declare_result
+2021-09-29 13:46:11,595 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:11,595 - INFO       - Result of  match - 501201 is added
+2021-09-29 13:46:11,595 - INFO       - Match is Ended - 501201
+2021-09-29 13:46:11,595 - INFO       - Match Start  501202
+2021-09-29 13:46:11,597 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:11,781 - INFO       - Begin function declare_result
+2021-09-29 13:46:11,782 - INFO       - Returned: declare_result
+2021-09-29 13:46:11,782 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:11,782 - INFO       - Result of  match - 501202 is added
+2021-09-29 13:46:11,782 - INFO       - Match is Ended - 501202
+2021-09-29 13:46:11,782 - INFO       - Match Start  501203
+2021-09-29 13:46:11,783 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:12,136 - INFO       - Begin function declare_result
+2021-09-29 13:46:12,137 - INFO       - Returned: declare_result
+2021-09-29 13:46:12,137 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:12,137 - INFO       - Result of  match - 501203 is added
+2021-09-29 13:46:12,137 - INFO       - Match is Ended - 501203
+2021-09-29 13:46:12,137 - INFO       - Match Start  501204
+2021-09-29 13:46:12,138 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:12,506 - INFO       - Begin function declare_result
+2021-09-29 13:46:12,506 - INFO       - Returned: declare_result
+2021-09-29 13:46:12,506 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:12,507 - INFO       - Result of  match - 501204 is added
+2021-09-29 13:46:12,507 - INFO       - Match is Ended - 501204
+2021-09-29 13:46:12,507 - INFO       - Match Start  501205
+2021-09-29 13:46:12,508 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:12,876 - INFO       - Begin function declare_result
+2021-09-29 13:46:12,876 - INFO       - Returned: declare_result
+2021-09-29 13:46:12,876 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:12,876 - INFO       - Result of  match - 501205 is added
+2021-09-29 13:46:12,876 - INFO       - Match is Ended - 501205
+2021-09-29 13:46:12,876 - INFO       - Match Start  501206
+2021-09-29 13:46:12,878 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:13,091 - INFO       - Begin function declare_result
+2021-09-29 13:46:13,091 - INFO       - Returned: declare_result
+2021-09-29 13:46:13,091 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:13,091 - INFO       - Result of  match - 501206 is added
+2021-09-29 13:46:13,091 - INFO       - Match is Ended - 501206
+2021-09-29 13:46:13,092 - INFO       - Match Start  501207
+2021-09-29 13:46:13,093 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:13,197 - INFO       - Begin function declare_result
+2021-09-29 13:46:13,197 - INFO       - Returned: declare_result
+2021-09-29 13:46:13,197 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:13,197 - INFO       - Result of  match - 501207 is added
+2021-09-29 13:46:13,197 - INFO       - Match is Ended - 501207
+2021-09-29 13:46:13,197 - INFO       - Match Start  501208
+2021-09-29 13:46:13,198 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:13,618 - INFO       - Begin function declare_result
+2021-09-29 13:46:13,621 - INFO       - Returned: declare_result
+2021-09-29 13:46:13,622 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:13,622 - INFO       - Result of  match - 501208 is added
+2021-09-29 13:46:13,622 - INFO       - Match is Ended - 501208
+2021-09-29 13:46:13,622 - INFO       - Match Start  501209
+2021-09-29 13:46:13,623 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:14,014 - INFO       - Begin function declare_result
+2021-09-29 13:46:14,014 - INFO       - Returned: declare_result
+2021-09-29 13:46:14,014 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:14,014 - INFO       - Result of  match - 501209 is added
+2021-09-29 13:46:14,015 - INFO       - Match is Ended - 501209
+2021-09-29 13:46:14,015 - INFO       - Match Start  501210
+2021-09-29 13:46:14,016 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:14,283 - INFO       - Begin function declare_result
+2021-09-29 13:46:14,283 - INFO       - Returned: declare_result
+2021-09-29 13:46:14,283 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:14,283 - INFO       - Result of  match - 501210 is added
+2021-09-29 13:46:14,283 - INFO       - Match is Ended - 501210
+2021-09-29 13:46:14,283 - INFO       - Match Start  501211
+2021-09-29 13:46:14,285 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:14,682 - INFO       - Begin function declare_result
+2021-09-29 13:46:14,682 - INFO       - Returned: declare_result
+2021-09-29 13:46:14,683 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:14,683 - INFO       - Result of  match - 501211 is added
+2021-09-29 13:46:14,683 - INFO       - Match is Ended - 501211
+2021-09-29 13:46:14,683 - INFO       - Match Start  501212
+2021-09-29 13:46:14,684 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:15,063 - INFO       - Begin function declare_result
+2021-09-29 13:46:15,064 - INFO       - Returned: declare_result
+2021-09-29 13:46:15,064 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:15,064 - INFO       - Result of  match - 501212 is added
+2021-09-29 13:46:15,064 - INFO       - Match is Ended - 501212
+2021-09-29 13:46:15,064 - INFO       - Match Start  501213
+2021-09-29 13:46:15,065 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:15,319 - INFO       - Begin function declare_result
+2021-09-29 13:46:15,320 - INFO       - Returned: declare_result
+2021-09-29 13:46:15,320 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:15,320 - INFO       - Result of  match - 501213 is added
+2021-09-29 13:46:15,320 - INFO       - Match is Ended - 501213
+2021-09-29 13:46:15,320 - INFO       - Match Start  501214
+2021-09-29 13:46:15,321 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:15,759 - INFO       - Begin function declare_result
+2021-09-29 13:46:15,759 - INFO       - Returned: declare_result
+2021-09-29 13:46:15,760 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:15,760 - INFO       - Result of  match - 501214 is added
+2021-09-29 13:46:15,760 - INFO       - Match is Ended - 501214
+2021-09-29 13:46:15,760 - INFO       - Match Start  501215
+2021-09-29 13:46:15,761 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:15,935 - INFO       - Begin function declare_result
+2021-09-29 13:46:15,935 - INFO       - Returned: declare_result
+2021-09-29 13:46:15,935 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:15,935 - INFO       - Result of  match - 501215 is added
+2021-09-29 13:46:15,936 - INFO       - Match is Ended - 501215
+2021-09-29 13:46:15,936 - INFO       - Match Start  501216
+2021-09-29 13:46:15,937 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:16,427 - INFO       - Begin function declare_result
+2021-09-29 13:46:16,428 - INFO       - Returned: declare_result
+2021-09-29 13:46:16,428 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:16,428 - INFO       - Result of  match - 501216 is added
+2021-09-29 13:46:16,428 - INFO       - Match is Ended - 501216
+2021-09-29 13:46:16,428 - INFO       - Match Start  501218
+2021-09-29 13:46:16,430 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:16,728 - INFO       - Begin function declare_result
+2021-09-29 13:46:16,728 - INFO       - Returned: declare_result
+2021-09-29 13:46:16,728 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:16,728 - INFO       - Result of  match - 501218 is added
+2021-09-29 13:46:16,728 - INFO       - Match is Ended - 501218
+2021-09-29 13:46:16,728 - INFO       - Match Start  501219
+2021-09-29 13:46:16,729 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:16,981 - INFO       - Begin function declare_result
+2021-09-29 13:46:16,981 - INFO       - Returned: declare_result
+2021-09-29 13:46:16,981 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:16,981 - INFO       - Result of  match - 501219 is added
+2021-09-29 13:46:16,981 - INFO       - Match is Ended - 501219
+2021-09-29 13:46:16,981 - INFO       - Match Start  501220
+2021-09-29 13:46:16,982 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:17,444 - INFO       - Begin function declare_result
+2021-09-29 13:46:17,444 - INFO       - Returned: declare_result
+2021-09-29 13:46:17,444 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:17,444 - INFO       - Result of  match - 501220 is added
+2021-09-29 13:46:17,444 - INFO       - Match is Ended - 501220
+2021-09-29 13:46:17,445 - INFO       - Match Start  501221
+2021-09-29 13:46:17,447 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:17,795 - INFO       - Begin function declare_result
+2021-09-29 13:46:17,795 - INFO       - Returned: declare_result
+2021-09-29 13:46:17,796 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:17,796 - INFO       - Result of  match - 501221 is added
+2021-09-29 13:46:17,796 - INFO       - Match is Ended - 501221
+2021-09-29 13:46:17,796 - INFO       - Match Start  501222
+2021-09-29 13:46:17,797 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:18,205 - INFO       - Begin function declare_result
+2021-09-29 13:46:18,206 - INFO       - Returned: declare_result
+2021-09-29 13:46:18,206 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:18,206 - INFO       - Result of  match - 501222 is added
+2021-09-29 13:46:18,206 - INFO       - Match is Ended - 501222
+2021-09-29 13:46:18,206 - INFO       - Match Start  501223
+2021-09-29 13:46:18,208 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:18,598 - INFO       - Begin function declare_result
+2021-09-29 13:46:18,598 - INFO       - Returned: declare_result
+2021-09-29 13:46:18,598 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:18,598 - INFO       - Result of  match - 501223 is added
+2021-09-29 13:46:18,598 - INFO       - Match is Ended - 501223
+2021-09-29 13:46:18,598 - INFO       - Match Start  501224
+2021-09-29 13:46:18,599 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:19,116 - INFO       - Begin function declare_result
+2021-09-29 13:46:19,116 - INFO       - Returned: declare_result
+2021-09-29 13:46:19,116 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:19,116 - INFO       - Result of  match - 501224 is added
+2021-09-29 13:46:19,116 - INFO       - Match is Ended - 501224
+2021-09-29 13:46:19,117 - INFO       - Match Start  501225
+2021-09-29 13:46:19,118 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:19,427 - INFO       - Begin function declare_result
+2021-09-29 13:46:19,427 - INFO       - Returned: declare_result
+2021-09-29 13:46:19,427 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:19,427 - INFO       - Result of  match - 501225 is added
+2021-09-29 13:46:19,428 - INFO       - Match is Ended - 501225
+2021-09-29 13:46:19,428 - INFO       - Match Start  501226
+2021-09-29 13:46:19,430 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:19,663 - INFO       - Begin function declare_result
+2021-09-29 13:46:19,663 - INFO       - Returned: declare_result
+2021-09-29 13:46:19,663 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:19,663 - INFO       - Result of  match - 501226 is added
+2021-09-29 13:46:19,663 - INFO       - Match is Ended - 501226
+2021-09-29 13:46:19,664 - INFO       - Match Start  501227
+2021-09-29 13:46:19,665 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:20,158 - INFO       - Begin function declare_result
+2021-09-29 13:46:20,158 - INFO       - Returned: declare_result
+2021-09-29 13:46:20,158 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:20,159 - INFO       - Result of  match - 501227 is added
+2021-09-29 13:46:20,159 - INFO       - Match is Ended - 501227
+2021-09-29 13:46:20,159 - INFO       - Match Start  501228
+2021-09-29 13:46:20,161 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:20,348 - INFO       - Begin function declare_result
+2021-09-29 13:46:20,349 - INFO       - Returned: declare_result
+2021-09-29 13:46:20,349 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:20,349 - INFO       - Result of  match - 501228 is added
+2021-09-29 13:46:20,349 - INFO       - Match is Ended - 501228
+2021-09-29 13:46:20,349 - INFO       - Match Start  501229
+2021-09-29 13:46:20,351 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:20,644 - INFO       - Begin function declare_result
+2021-09-29 13:46:20,644 - INFO       - Returned: declare_result
+2021-09-29 13:46:20,644 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:20,644 - INFO       - Result of  match - 501229 is added
+2021-09-29 13:46:20,644 - INFO       - Match is Ended - 501229
+2021-09-29 13:46:20,644 - INFO       - Match Start  501230
+2021-09-29 13:46:20,646 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:21,030 - INFO       - Begin function declare_result
+2021-09-29 13:46:21,031 - INFO       - Returned: declare_result
+2021-09-29 13:46:21,031 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:21,031 - INFO       - Result of  match - 501230 is added
+2021-09-29 13:46:21,031 - INFO       - Match is Ended - 501230
+2021-09-29 13:46:21,031 - INFO       - Match Start  501231
+2021-09-29 13:46:21,033 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:21,421 - INFO       - Begin function declare_result
+2021-09-29 13:46:21,421 - INFO       - Returned: declare_result
+2021-09-29 13:46:21,421 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:21,421 - INFO       - Result of  match - 501231 is added
+2021-09-29 13:46:21,422 - INFO       - Match is Ended - 501231
+2021-09-29 13:46:21,422 - INFO       - Match Start  501232
+2021-09-29 13:46:21,423 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:21,786 - INFO       - Begin function declare_result
+2021-09-29 13:46:21,786 - INFO       - Returned: declare_result
+2021-09-29 13:46:21,787 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:21,787 - INFO       - Result of  match - 501232 is added
+2021-09-29 13:46:21,787 - INFO       - Match is Ended - 501232
+2021-09-29 13:46:21,787 - INFO       - Match Start  501233
+2021-09-29 13:46:21,788 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:22,074 - INFO       - Begin function declare_result
+2021-09-29 13:46:22,074 - INFO       - Returned: declare_result
+2021-09-29 13:46:22,075 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:22,075 - INFO       - Result of  match - 501233 is added
+2021-09-29 13:46:22,075 - INFO       - Match is Ended - 501233
+2021-09-29 13:46:22,075 - INFO       - Match Start  501234
+2021-09-29 13:46:22,076 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:22,421 - INFO       - Begin function declare_result
+2021-09-29 13:46:22,421 - INFO       - Returned: declare_result
+2021-09-29 13:46:22,421 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:22,421 - INFO       - Result of  match - 501234 is added
+2021-09-29 13:46:22,421 - INFO       - Match is Ended - 501234
+2021-09-29 13:46:22,422 - INFO       - Match Start  501235
+2021-09-29 13:46:22,424 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:22,724 - INFO       - Begin function declare_result
+2021-09-29 13:46:22,724 - INFO       - Returned: declare_result
+2021-09-29 13:46:22,724 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:22,724 - INFO       - Result of  match - 501235 is added
+2021-09-29 13:46:22,725 - INFO       - Match is Ended - 501235
+2021-09-29 13:46:22,725 - INFO       - Match Start  501236
+2021-09-29 13:46:22,726 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:23,044 - INFO       - Begin function declare_result
+2021-09-29 13:46:23,045 - INFO       - Returned: declare_result
+2021-09-29 13:46:23,045 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:23,045 - INFO       - Result of  match - 501236 is added
+2021-09-29 13:46:23,045 - INFO       - Match is Ended - 501236
+2021-09-29 13:46:23,045 - INFO       - Match Start  501237
+2021-09-29 13:46:23,046 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:23,418 - INFO       - Begin function declare_result
+2021-09-29 13:46:23,418 - INFO       - Returned: declare_result
+2021-09-29 13:46:23,418 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:23,418 - INFO       - Result of  match - 501237 is added
+2021-09-29 13:46:23,418 - INFO       - Match is Ended - 501237
+2021-09-29 13:46:23,418 - INFO       - Match Start  501238
+2021-09-29 13:46:23,419 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:23,690 - INFO       - Begin function declare_result
+2021-09-29 13:46:23,690 - INFO       - Returned: declare_result
+2021-09-29 13:46:23,690 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:23,690 - INFO       - Result of  match - 501238 is added
+2021-09-29 13:46:23,690 - INFO       - Match is Ended - 501238
+2021-09-29 13:46:23,691 - INFO       - Match Start  501239
+2021-09-29 13:46:23,692 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:24,112 - INFO       - Begin function declare_result
+2021-09-29 13:46:24,112 - INFO       - Returned: declare_result
+2021-09-29 13:46:24,113 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:24,113 - INFO       - Result of  match - 501239 is added
+2021-09-29 13:46:24,113 - INFO       - Match is Ended - 501239
+2021-09-29 13:46:24,113 - INFO       - Match Start  501240
+2021-09-29 13:46:24,114 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:24,394 - INFO       - Begin function declare_result
+2021-09-29 13:46:24,394 - INFO       - Returned: declare_result
+2021-09-29 13:46:24,394 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:24,394 - INFO       - Result of  match - 501240 is added
+2021-09-29 13:46:24,394 - INFO       - Match is Ended - 501240
+2021-09-29 13:46:24,394 - INFO       - Match Start  501241
+2021-09-29 13:46:24,395 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:24,715 - INFO       - Begin function declare_result
+2021-09-29 13:46:24,716 - INFO       - Returned: declare_result
+2021-09-29 13:46:24,716 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:24,716 - INFO       - Result of  match - 501241 is added
+2021-09-29 13:46:24,716 - INFO       - Match is Ended - 501241
+2021-09-29 13:46:24,716 - INFO       - Match Start  501242
+2021-09-29 13:46:24,718 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:24,993 - INFO       - Begin function declare_result
+2021-09-29 13:46:24,993 - INFO       - Returned: declare_result
+2021-09-29 13:46:24,993 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:24,993 - INFO       - Result of  match - 501242 is added
+2021-09-29 13:46:24,993 - INFO       - Match is Ended - 501242
+2021-09-29 13:46:24,993 - INFO       - Match Start  501243
+2021-09-29 13:46:24,994 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:25,508 - INFO       - Begin function declare_result
+2021-09-29 13:46:25,509 - INFO       - Returned: declare_result
+2021-09-29 13:46:25,509 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:25,509 - INFO       - Result of  match - 501243 is added
+2021-09-29 13:46:25,509 - INFO       - Match is Ended - 501243
+2021-09-29 13:46:25,509 - INFO       - Match Start  501244
+2021-09-29 13:46:25,510 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:25,910 - INFO       - Begin function declare_result
+2021-09-29 13:46:25,910 - INFO       - Returned: declare_result
+2021-09-29 13:46:25,910 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:25,910 - INFO       - Result of  match - 501244 is added
+2021-09-29 13:46:25,910 - INFO       - Match is Ended - 501244
+2021-09-29 13:46:25,910 - INFO       - Match Start  501245
+2021-09-29 13:46:25,912 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:26,196 - INFO       - Begin function declare_result
+2021-09-29 13:46:26,196 - INFO       - Returned: declare_result
+2021-09-29 13:46:26,196 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:26,196 - INFO       - Result of  match - 501245 is added
+2021-09-29 13:46:26,197 - INFO       - Match is Ended - 501245
+2021-09-29 13:46:26,197 - INFO       - Match Start  501246
+2021-09-29 13:46:26,198 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:26,631 - INFO       - Begin function declare_result
+2021-09-29 13:46:26,632 - INFO       - Returned: declare_result
+2021-09-29 13:46:26,632 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:26,632 - INFO       - Result of  match - 501246 is added
+2021-09-29 13:46:26,632 - INFO       - Match is Ended - 501246
+2021-09-29 13:46:26,632 - INFO       - Match Start  501247
+2021-09-29 13:46:26,633 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:26,997 - INFO       - Begin function declare_result
+2021-09-29 13:46:26,997 - INFO       - Returned: declare_result
+2021-09-29 13:46:26,997 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:26,997 - INFO       - Result of  match - 501247 is added
+2021-09-29 13:46:26,997 - INFO       - Match is Ended - 501247
+2021-09-29 13:46:26,997 - INFO       - Match Start  501248
+2021-09-29 13:46:26,999 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:27,283 - INFO       - Begin function declare_result
+2021-09-29 13:46:27,284 - INFO       - Returned: declare_result
+2021-09-29 13:46:27,284 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:27,284 - INFO       - Result of  match - 501248 is added
+2021-09-29 13:46:27,284 - INFO       - Match is Ended - 501248
+2021-09-29 13:46:27,284 - INFO       - Match Start  501249
+2021-09-29 13:46:27,285 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:27,576 - INFO       - Begin function declare_result
+2021-09-29 13:46:27,576 - INFO       - Returned: declare_result
+2021-09-29 13:46:27,576 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:27,576 - INFO       - Result of  match - 501249 is added
+2021-09-29 13:46:27,576 - INFO       - Match is Ended - 501249
+2021-09-29 13:46:27,576 - INFO       - Match Start  501250
+2021-09-29 13:46:27,578 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:27,892 - INFO       - Begin function declare_result
+2021-09-29 13:46:27,892 - INFO       - Returned: declare_result
+2021-09-29 13:46:27,892 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:27,893 - INFO       - Result of  match - 501250 is added
+2021-09-29 13:46:27,893 - INFO       - Match is Ended - 501250
+2021-09-29 13:46:27,893 - INFO       - Match Start  501251
+2021-09-29 13:46:27,894 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:28,251 - INFO       - Begin function declare_result
+2021-09-29 13:46:28,252 - INFO       - Returned: declare_result
+2021-09-29 13:46:28,252 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:28,252 - INFO       - Result of  match - 501251 is added
+2021-09-29 13:46:28,252 - INFO       - Match is Ended - 501251
+2021-09-29 13:46:28,252 - INFO       - Match Start  501252
+2021-09-29 13:46:28,253 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:28,667 - INFO       - Begin function declare_result
+2021-09-29 13:46:28,667 - INFO       - Returned: declare_result
+2021-09-29 13:46:28,667 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:28,667 - INFO       - Result of  match - 501252 is added
+2021-09-29 13:46:28,667 - INFO       - Match is Ended - 501252
+2021-09-29 13:46:28,668 - INFO       - Match Start  501253
+2021-09-29 13:46:28,669 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:28,971 - INFO       - Begin function declare_result
+2021-09-29 13:46:28,972 - INFO       - Returned: declare_result
+2021-09-29 13:46:28,972 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:28,972 - INFO       - Result of  match - 501253 is added
+2021-09-29 13:46:28,972 - INFO       - Match is Ended - 501253
+2021-09-29 13:46:28,972 - INFO       - Match Start  501254
+2021-09-29 13:46:28,973 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:29,216 - INFO       - Begin function declare_result
+2021-09-29 13:46:29,216 - INFO       - Returned: declare_result
+2021-09-29 13:46:29,216 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:29,216 - INFO       - Result of  match - 501254 is added
+2021-09-29 13:46:29,217 - INFO       - Match is Ended - 501254
+2021-09-29 13:46:29,217 - INFO       - Match Start  501255
+2021-09-29 13:46:29,218 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:29,626 - INFO       - Begin function declare_result
+2021-09-29 13:46:29,626 - INFO       - Returned: declare_result
+2021-09-29 13:46:29,626 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:29,626 - INFO       - Result of  match - 501255 is added
+2021-09-29 13:46:29,626 - INFO       - Match is Ended - 501255
+2021-09-29 13:46:29,626 - INFO       - Match Start  501256
+2021-09-29 13:46:29,627 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:30,103 - INFO       - Begin function declare_result
+2021-09-29 13:46:30,103 - INFO       - Returned: declare_result
+2021-09-29 13:46:30,103 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:30,103 - INFO       - Result of  match - 501256 is added
+2021-09-29 13:46:30,103 - INFO       - Match is Ended - 501256
+2021-09-29 13:46:30,103 - INFO       - Match Start  501257
+2021-09-29 13:46:30,104 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:30,453 - INFO       - Begin function declare_result
+2021-09-29 13:46:30,456 - INFO       - Returned: declare_result
+2021-09-29 13:46:30,456 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:30,456 - INFO       - Result of  match - 501257 is added
+2021-09-29 13:46:30,456 - INFO       - Match is Ended - 501257
+2021-09-29 13:46:30,457 - INFO       - Match Start  501258
+2021-09-29 13:46:30,458 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:30,794 - INFO       - Begin function declare_result
+2021-09-29 13:46:30,795 - INFO       - Returned: declare_result
+2021-09-29 13:46:30,795 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:30,795 - INFO       - Result of  match - 501258 is added
+2021-09-29 13:46:30,795 - INFO       - Match is Ended - 501258
+2021-09-29 13:46:30,795 - INFO       - Match Start  501259
+2021-09-29 13:46:30,796 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:31,132 - INFO       - Begin function declare_result
+2021-09-29 13:46:31,132 - INFO       - Returned: declare_result
+2021-09-29 13:46:31,132 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:31,132 - INFO       - Result of  match - 501259 is added
+2021-09-29 13:46:31,132 - INFO       - Match is Ended - 501259
+2021-09-29 13:46:31,132 - INFO       - Match Start  501260
+2021-09-29 13:46:31,134 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:31,532 - INFO       - Begin function declare_result
+2021-09-29 13:46:31,532 - INFO       - Returned: declare_result
+2021-09-29 13:46:31,532 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:31,532 - INFO       - Result of  match - 501260 is added
+2021-09-29 13:46:31,532 - INFO       - Match is Ended - 501260
+2021-09-29 13:46:31,532 - INFO       - Match Start  501261
+2021-09-29 13:46:31,533 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:31,730 - INFO       - Begin function declare_result
+2021-09-29 13:46:31,730 - INFO       - Returned: declare_result
+2021-09-29 13:46:31,730 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:31,730 - INFO       - Result of  match - 501261 is added
+2021-09-29 13:46:31,730 - INFO       - Match is Ended - 501261
+2021-09-29 13:46:31,730 - INFO       - Match Start  501262
+2021-09-29 13:46:31,731 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:32,022 - INFO       - Begin function declare_result
+2021-09-29 13:46:32,022 - INFO       - Returned: declare_result
+2021-09-29 13:46:32,022 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:32,022 - INFO       - Result of  match - 501262 is added
+2021-09-29 13:46:32,022 - INFO       - Match is Ended - 501262
+2021-09-29 13:46:32,022 - INFO       - Match Start  501263
+2021-09-29 13:46:32,024 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:32,446 - INFO       - Begin function declare_result
+2021-09-29 13:46:32,446 - INFO       - Returned: declare_result
+2021-09-29 13:46:32,446 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:32,446 - INFO       - Result of  match - 501263 is added
+2021-09-29 13:46:32,447 - INFO       - Match is Ended - 501263
+2021-09-29 13:46:32,447 - INFO       - Match Start  501264
+2021-09-29 13:46:32,448 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:32,818 - INFO       - Begin function declare_result
+2021-09-29 13:46:32,818 - INFO       - Returned: declare_result
+2021-09-29 13:46:32,818 - INFO       - Returned: create_scoreboard
+2021-09-29 13:46:32,818 - INFO       - Result of  match - 501264 is added
+2021-09-29 13:46:32,818 - INFO       - Match is Ended - 501264
+2021-09-29 13:46:32,818 - INFO       - Match Start  501265
+2021-09-29 13:46:32,820 - INFO       - Begin function create_scoreboard
+2021-09-29 13:46:33,019 - INFO       - Begin function declare_result
+2021-09-29 13:46:33,019 - ERROR      - Exception: not enough values to unpack (expected 2, got 1)
+2021-09-29 13:46:33,019 - ERROR      - Exception: 
+ got 1)
+Exception: 

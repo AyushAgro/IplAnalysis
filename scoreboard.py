@@ -1,8 +1,7 @@
 import pandas as pd
 from tabulate import tabulate
 from exception import DiffrentTeam, TooManyBall, ColumnsNotFound
-from quo import echo
-
+from log import log_decorator, logger_obj
 pd.options.mode.chained_assignment = None
 
 required_columns = {
@@ -28,7 +27,7 @@ required_columns = {
     "player_dismissed": "object",
 }
 
-
+@log_decorator
 def create_scoreboard(Match, match_df, teams):
     match_detail = pd.DataFrame(
         {
@@ -93,10 +92,10 @@ def get_scoreboard(row, teams):
     BowlingTeam = row["bowling_team"]
 
     if BattingTeam not in teams or BowlingTeam not in teams:
-        # add_to_log(logger, 'error', 'Team given is not as same as given before')
+        logger_obj.error('Team given is not as same as given before')
         raise DiffrentTeam
     if row["ball"] > 20.0:
-        # add_to_log(logger, 'error', 'over Limit exceed from 20')
+        logger_obj.error('over Limit exceed from 20')
         raise TooManyBall
 
     striker = teams[BattingTeam].find_player(row["striker"])
@@ -113,7 +112,6 @@ def get_scoreboard(row, teams):
 
     if row["player_dismissed"] != "":
         isWicket(row, teams, BattingTeam, striker, non_striker, bowler)
-
 
 def isWicket(row, teams, BattingTeam, striker, non_striker, bowler):
     teams[BattingTeam].out += 1
@@ -147,7 +145,7 @@ def isExtra(row, teams, BattingTeam, striker, bowler):
         if row[extra] > 0:
             teams[BattingTeam].add_extra(extra[0], row[extra])
 
-
+@log_decorator
 def declare_result(score, i):
     team1, team2 = score.keys()
     if i > 3:
@@ -159,7 +157,7 @@ def declare_result(score, i):
     else:
         print("It was a tie, Check Below for Super Over\n")
 
-
+@log_decorator
 def preprocessData(df):
     global required_columns
     numeric_dtype = ["wides", "noballs", "byes", "legbyes", "penalty"]
@@ -172,14 +170,14 @@ def preprocessData(df):
         if col in category_dtype:
             df[col].fillna("", inplace=True)
         if col not in columns:
-            # add_to_log(logger, 'error', f'{col} Cannot be Found')
+            logger_obj.error(f'{col} Cannot be Found')
             raise ColumnsNotFound(col)
         else:
             try:
                 df[col] = df[col].astype(col_type, errors="raise")
             except ValueError:
+                logger_obj.warning(f'{col} Cannot be changed into {col_type}')
                 pass
-                # add_to_log(logger, 'warning', f'{col} Cannot be changed into {col_type}')
     df = df[required_columns.keys()]
     df["start_date"] = df["start_date"].dt.strftime("%d/%m/%y")
     return df

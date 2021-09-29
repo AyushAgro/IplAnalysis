@@ -21,8 +21,7 @@ class Team:
         self.out = 0
 
     def find_player(self, name):
-        if len(self.players) > 11:
-            raise MaximumPlayer(self.name)
+        # print(list(self.players.keys()))
         if name not in self.players:
             self.players[name] = Player(name)
         return self.players[name]
