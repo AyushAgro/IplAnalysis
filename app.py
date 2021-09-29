@@ -106,4 +106,4 @@ for filename in os.listdir(data_dir):
         sys.stdout = orig_stdout
 
 print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
-# Total Time Taken for input of size 3834333 is  52.054842710494995
+# Total Time Taken for input of size 4036140 is  47.289313554763794

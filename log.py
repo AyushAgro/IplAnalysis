@@ -54,9 +54,11 @@ def get_logger(log_file_name, log_sub_dir="log"):
     logger.addHandler(handler)
     return logger
 
-
-with open("config.yaml") as f:
-    data = yaml.load(f, Loader=SafeLoader)
-    log_file = data["File"]["log_file"]
+if os.path.exists(os.path.join(os.getcwd(), 'config.yaml')):
+    with open("config.yaml") as f:
+        data = yaml.load(f, Loader=SafeLoader)
+        log_file = data["File"]["log_file"]
+else:
+    log_file = 'std.log'
 
 logger_obj = get_logger(log_file)
