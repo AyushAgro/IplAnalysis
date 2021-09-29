@@ -30,7 +30,7 @@ class Team:
     def __init__(self, name):
         self.name = name
         self.players = defaultdict(Player)
-        self.extra = {"b": 0, "lb": 0, "w": 0, "nb": 0, "p": 0}
+        self.extra = {"b": 0, "l": 0, "w": 0, "nb": 0, "p": 0}
         self.extra_run = 0
         self.out = 0
         self.batting_columns = ["Batmans", "Status", "Run", "Ball", "4s", "6s"]
@@ -64,11 +64,11 @@ class Team:
 
     def reset(self):
         player_name = list(self.players.keys())
-        print(player_name)
+        # print(player_name)
         self.players = defaultdict(Player)
         for player in player_name:
             self.players[player] = Player(player)
-        self.extra = {"b": 0, "lb": 0, "w": 0, "nb": 0, "p": 0}
+        self.extra = {"b": 0, "l": 0, "w": 0, "nb": 0, "p": 0}
         self.extra_run = 0
         self.out = 0
 

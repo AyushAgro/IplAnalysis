@@ -46,12 +46,12 @@ def create_scoreboard(Match, match_df, teams):
         print()
         if innings > 2 and innings % 2 == 1:
             declare_result(score, innings)
-            BattingTeam.reset()
-            BowlingTeam.reset()
             print("Super Over-" + "I" * (innings // 2))
         innings += 1
         BattingTeam.print_batting()
         score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
+        BattingTeam.reset()
+        BowlingTeam.reset()
 
     try:
         declare_result(score, innings)
@@ -80,7 +80,7 @@ def get_scoreboard(row, teams):
     striker.add_run(row["runs_off_bat"])
 
     if int(row["extras"]) > 0:  # Checking if there is any extra or not.
-        isExtra(row, teams, BattingTeam, striker, bowler)
+        isExtra(row, teams, BattingTeam, striker)
 
     if row["player_dismissed"] != "":
         isWicket(row, teams, BattingTeam, striker, non_striker, bowler)
@@ -103,7 +103,7 @@ def isWicket(row, teams, BattingTeam, striker, non_striker, bowler):
             non_striker.isOut("Run Out")
 
 
-def isExtra(row, teams, BattingTeam, striker, bowler):
+def isExtra(row, teams, BattingTeam, striker):
     extras = [
         "wides",
         "noballs",

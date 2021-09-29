@@ -67,15 +67,6 @@ for filename in os.listdir(data_dir):
         df_info.apply(lambda x: get_teams(x, teams), axis=1)
     except:
         logger_obj.warning(f"info File cannot be found for given {file}")
-
-    try:
-        df_info = pd.read_csv(info_file, names = ['info', 'Team Name','Player Name', 'code'])
-        df_info = df_info.drop(['info', 'code'], axis = 1).reset_index(drop = True ).dropna()
-        df_info = df_info[df_info['Team Name'] != 'people']
-        df_info.apply(lambda x: get_teams(x, teams), axis = 1)
-    except:
-        logger_obj.error(f"Info File cannot be found of name {file}")
-
     if df.empty:
         logger_obj.error("Empty Table")
         raise exception.TableEmpty
