@@ -4,7 +4,7 @@ import os
 import sys
 import yaml
 import collections
-from log import logger_obj
+from log import log_decorator, logger_obj
 import exception
 from classes import Team, Match
 from scoreboard import create_scoreboard, preprocessData
@@ -19,14 +19,15 @@ data_dir = ""
 orig_stdout = sys.stdout
 
 
+@log_decorator
 def read_yaml():  # To read Config YAML
     global allowed_filetype, output_dir, data_dir
 
     with open("config.yaml") as f:
         data = yaml.load(f, Loader=SafeLoader)
 
-    data_dir = os.path.join(os.getcwd() , data["File"]["data_dir"])
-    output_dir = os.path.join(os.getcwd() ,data["File"]["output_dir"])
+    data_dir = os.path.join(os.getcwd(), data["File"]["data_dir"])
+    output_dir = os.path.join(os.getcwd(), data["File"]["output_dir"])
     allowed_filetype = data["FileType"]
 
     if not os.path.exists(data_dir):  # Cheking if data directory is present or not
@@ -37,11 +38,11 @@ def read_yaml():  # To read Config YAML
 
 
 def get_teams(row, team):
-    team_name = row['Team Name']
+    team_name = row["Team Name"]
     if team_name not in team:
         newTeam = Team(team_name)
         team[team_name] = newTeam
-    team[team_name].find_player(row['Player Name'])
+    team[team_name].find_player(row["Player Name"])
 
 
 read_yaml()
@@ -49,9 +50,9 @@ read_yaml()
 
 for filename in os.listdir(data_dir):
     file = data_dir + "/" + filename
-    if '_info' in file:
+    if "_info" in file:
         continue
-    logger_obj.info(f'Currently Processing File {file}')
+    logger_obj.info(f"Currently Processing File {file}")
 
     df = pd.read_csv(file, low_memory=False)
     info_file = str(file.split(".")[:-1][0]) + "_info" + ".csv"
@@ -59,10 +60,10 @@ for filename in os.listdir(data_dir):
 
     try:
         df_info = pd.read_csv(
-            info_file, names=['info', 'Team Name', 'Player Name', 'code'])
-        df_info = df_info.drop(
-            ['info', 'code'], axis=1).reset_index(drop=True).dropna()
-        df_info = df_info[df_info['Team Name'] != 'people']
+            info_file, names=["info", "Team Name", "Player Name", "code"]
+        )
+        df_info = df_info.drop(["info", "code"], axis=1).reset_index(drop=True).dropna()
+        df_info = df_info[df_info["Team Name"] != "people"]
         df_info.apply(lambda x: get_teams(x, teams), axis=1)
     except:
         logger_obj.warning(f"info File cannot be found for given {file}")
@@ -79,7 +80,6 @@ for filename in os.listdir(data_dir):
         all_match = df_group_match.groups.keys()
 
         for match_id in all_match:
-            # logger_obj.info('')
             logger_obj.info(f"Match Start  {match_id}")
             match_df = df_group_match.get_group(match_id)
 
@@ -103,6 +103,8 @@ for filename in os.listdir(data_dir):
 
             logger_obj.info(f"Result of  match - {match_id} is added")
             logger_obj.info(f"Match is Ended - {match_id}")
+
         sys.stdout = orig_stdout
+        
 print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
 # Total Time Taken for input of size 3834333 is  52.054842710494995

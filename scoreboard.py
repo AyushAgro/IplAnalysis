@@ -2,11 +2,12 @@ import pandas as pd
 from tabulate import tabulate
 from exception import DiffrentTeam, TooManyBall, ColumnsNotFound
 from log import log_decorator, logger_obj
+
 pd.options.mode.chained_assignment = None
 
 required_columns = {
     "match_id": "int64",
-    "season": "int16",
+    "season": "object",
     "start_date": "datetime64",
     "innings": "uint8",
     "venue": "object",
@@ -27,21 +28,11 @@ required_columns = {
     "player_dismissed": "object",
 }
 
+
 @log_decorator
 def create_scoreboard(Match, match_df, teams):
-    match_detail = pd.DataFrame(
-        {
-            "Match-id": Match.match_id,
-            "Teams": Match.team1 + " vs " + Match.team2,
-            "Venue": Match.venue,
-            "season": Match.season,
-            "Start Date": Match.start_date,
-        },
-        index=[0],
-    )
-    header = tabulate(match_detail, headers="keys", tablefmt="grid", showindex=False)
-    print(header)
-    columns = ["Batmans", "Status", "Run", "Ball", "4s", "6s"]
+    print(Match)
+
     total_innings = match_df["innings"].nunique()
     score = {}
 
@@ -59,26 +50,7 @@ def create_scoreboard(Match, match_df, teams):
             BowlingTeam.reset()
             print("Super Over-" + "I" * (innings // 2))
         innings += 1
-
-        result = pd.DataFrame(columns=columns)
-        for name, player in BattingTeam.players.items():
-            if player.out != "":
-                row = {
-                    "Batmans": name,
-                    "Status": player.out,
-                    "Run": player.run_scored,
-                    "Ball": player.ball_played,
-                    "4s": player.fours,
-                    "6s": player.six,
-                }
-                result = result.append(row, ignore_index=True)
-
-        table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
-        print(f"{BattingTeam.name}\n{table}\nExtra - {int(BattingTeam.extra_run)} (",end="")
-
-        for key, value in BattingTeam.extra.items():
-            print(f" {key}-{int(value)},", end="")
-        print(")")
+        BattingTeam.print_batting()
         score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
 
     try:
@@ -92,10 +64,10 @@ def get_scoreboard(row, teams):
     BowlingTeam = row["bowling_team"]
 
     if BattingTeam not in teams or BowlingTeam not in teams:
-        logger_obj.error('Team given is not as same as given before')
+        logger_obj.error("Team given is not as same as given before")
         raise DiffrentTeam
     if row["ball"] > 20.0:
-        logger_obj.error('over Limit exceed from 20')
+        logger_obj.error("over Limit exceed from 20")
         raise TooManyBall
 
     striker = teams[BattingTeam].find_player(row["striker"])
@@ -113,6 +85,7 @@ def get_scoreboard(row, teams):
     if row["player_dismissed"] != "":
         isWicket(row, teams, BattingTeam, striker, non_striker, bowler)
 
+
 def isWicket(row, teams, BattingTeam, striker, non_striker, bowler):
     teams[BattingTeam].out += 1
 
@@ -128,6 +101,7 @@ def isWicket(row, teams, BattingTeam, striker, non_striker, bowler):
             striker.isOut("Run Out")
         else:
             non_striker.isOut("Run Out")
+
 
 def isExtra(row, teams, BattingTeam, striker, bowler):
     extras = [
@@ -145,7 +119,7 @@ def isExtra(row, teams, BattingTeam, striker, bowler):
         if row[extra] > 0:
             teams[BattingTeam].add_extra(extra[0], row[extra])
 
-@log_decorator
+
 def declare_result(score, i):
     team1, team2 = score.keys()
     if i > 3:
@@ -155,7 +129,8 @@ def declare_result(score, i):
     elif score[team1][0] < score[team2][0]:
         print(f"\n{team2} won the Match by {10 - score[team2][1]} wicket\n")
     else:
-        print("It was a tie, Check Below for Super Over\n")
+        print("It was a tie, So it Time for Super Over\n")
+
 
 @log_decorator
 def preprocessData(df):
@@ -170,14 +145,14 @@ def preprocessData(df):
         if col in category_dtype:
             df[col].fillna("", inplace=True)
         if col not in columns:
-            logger_obj.error(f'{col} Cannot be Found')
+            logger_obj.error(f"{col} Cannot be Found")
             raise ColumnsNotFound(col)
         else:
             try:
                 df[col] = df[col].astype(col_type, errors="raise")
             except ValueError:
-                logger_obj.warning(f'{col} Cannot be changed into {col_type}')
+                logger_obj.warning(f"{col} Cannot be changed into {col_type}")
                 pass
     df = df[required_columns.keys()]
-    df["start_date"] = df["start_date"].dt.strftime("%d/%m/%y")
+    df["start_date"] = df["start_date"].dt.strftime("%d %B %Y")
     return df

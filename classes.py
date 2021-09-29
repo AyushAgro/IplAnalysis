@@ -1,5 +1,6 @@
 from collections import defaultdict
-from exception import MaximumPlayer
+import pandas as pd
+from tabulate import tabulate
 
 
 class Match:
@@ -11,6 +12,19 @@ class Match:
         self.start_date = start_date
         self.season = season
 
+    def __str__(self):
+        match_detail = pd.DataFrame(
+            {
+                "Match-id": self.match_id,
+                "Teams": self.team1 + " vs " + self.team2,
+                "Venue": self.venue,
+                "season": self.season,
+                "Start Date": self.start_date,
+            },
+            index=[0],
+        )
+        return tabulate(match_detail, headers="keys", tablefmt="grid", showindex=False)
+
 
 class Team:
     def __init__(self, name):
@@ -19,9 +33,9 @@ class Team:
         self.extra = {"b": 0, "lb": 0, "w": 0, "nb": 0, "p": 0}
         self.extra_run = 0
         self.out = 0
+        self.batting_columns = ["Batmans", "Status", "Run", "Ball", "4s", "6s"]
 
     def find_player(self, name):
-        # print(list(self.players.keys()))
         if name not in self.players:
             self.players[name] = Player(name)
         return self.players[name]
@@ -32,9 +46,21 @@ class Team:
 
     def get_total(self):
         runs = 0
-        for key, value in self.players.items():
+        for _, value in self.players.items():
             runs += value.run_scored
         return runs + self.extra_run
+
+    def print_batting(self):
+        result = pd.DataFrame(columns=self.batting_columns)
+        for _, player in self.players.items():
+            if player.out != "":
+                result = result.append(player.get_Battingdetail(), ignore_index=True)
+
+        table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
+        print(f"{self.name}\n{table}\nExtra - {int(self.extra_run)} (", end="")
+        for key, value in self.extra.items():
+            print(f" {key}-{int(value)},", end="")
+        print(")")
 
     def reset(self):
         player_name = list(self.players.keys())
@@ -68,3 +94,14 @@ class Player:
 
     def isOut(self, name):
         self.out = str(name)
+
+    def get_Battingdetail(self):
+        row = {
+            "Batmans": self.name,
+            "Status": self.out,
+            "Run": self.run_scored,
+            "Ball": self.ball_played,
+            "4s": self.fours,
+            "6s": self.six,
+        }
+        return row
