@@ -48,11 +48,37 @@ def create_scoreboard(Match, match_df, teams):
             declare_result(score, innings)
             BattingTeam.reset()
             BowlingTeam.reset()
+<<<<<<< HEAD
             print("Super Over-" + "I" * (innings // 2))
         innings += 1
         BattingTeam.print_batting()
         score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
 
+=======
+            print('Super Over-' + 'I' * (innings // 2))
+        innings += 1
+
+        result = pd.DataFrame(columns=columns)
+        for name, player in BattingTeam.players.items():
+            if player.out != "":
+                row = {
+                    "Batmans": name,
+                    "Status": player.out,
+                    "Run": player.run_scored,
+                    "Ball": player.ball_played,
+                    "4s": player.fours,
+                    "6s": player.six,
+                }
+                result = result.append(row, ignore_index=True)
+
+        table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
+        print(f"{BattingTeam.name}\n{table}\nExtra - {int(BattingTeam.extra_run)} (",end="",)
+
+        for key, value in BattingTeam.extra.items():
+            print(f" {key}-{int(value)},", end="")
+        print(")")
+        score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
+>>>>>>> 726e88d3370e850edb8dcafa83c05f8c9f02acbd
     try:
         declare_result(score, innings)
     except Exception as e:

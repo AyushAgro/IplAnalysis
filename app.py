@@ -50,13 +50,19 @@ read_yaml()
 
 for filename in os.listdir(data_dir):
     file = data_dir + "/" + filename
+<<<<<<< HEAD
     if "_info" in file:
         continue
     logger_obj.info(f"Currently Processing File {file}")
+=======
+    if '_info' in file: continue
+    add_to_log(logger, "info", f"Currently Processing File {file}")
+>>>>>>> 726e88d3370e850edb8dcafa83c05f8c9f02acbd
 
     df = pd.read_csv(file, low_memory=False)
     info_file = str(file.split(".")[:-1][0]) + "_info" + ".csv"
     teams = collections.defaultdict(Team)
+<<<<<<< HEAD
 
     try:
         df_info = pd.read_csv(
@@ -67,7 +73,17 @@ for filename in os.listdir(data_dir):
         df_info.apply(lambda x: get_teams(x, teams), axis=1)
     except:
         logger_obj.warning(f"info File cannot be found for given {file}")
+=======
+>>>>>>> 726e88d3370e850edb8dcafa83c05f8c9f02acbd
 
+    try:
+        df_info = pd.read_csv(info_file, names = ['info', 'Team Name','Player Name', 'code'])
+        df_info = df_info.drop(['info', 'code'], axis = 1).reset_index(drop = True ).dropna()
+        df_info = df_info[df_info['Team Name'] != 'people']
+        df_info.apply(lambda x: get_teams(x, teams), axis = 1)
+    except:
+        add_to_log(logger, "error", f"Info File cannot be found of name {file}")
+     
     if df.empty:
         logger_obj.error("Empty Table")
         raise exception.TableEmpty
@@ -87,6 +103,7 @@ for filename in os.listdir(data_dir):
                 logger_obj.info(f"Match with id  {match_id} has no data avilable.")
                 continue
 
+<<<<<<< HEAD
             teams1 = match_df["batting_team"].values[0]
             teams2 = match_df["bowling_team"].values[0]
             venue = match_df["venue"].values[0]
@@ -97,6 +114,18 @@ for filename in os.listdir(data_dir):
                 teams[teams1] = Team(teams1)
             if teams2 not in teams:
                 teams[teams2] = Team(teams2)
+=======
+        teams1 = match_df["batting_team"].values[0]
+        teams2 = match_df["bowling_team"].values[0]
+        venue = match_df["venue"].values[0]
+        season = match_df["season"].values[0]
+        start_date = match_df["start_date"].values[0]
+        
+        if teams1 not in teams:
+            teams[teams1] = Team(teams1)
+        if teams2 not in teams:
+            teams[teams2] = Team(teams2)
+>>>>>>> 726e88d3370e850edb8dcafa83c05f8c9f02acbd
 
             match = Match(match_id, teams1, teams2, venue, start_date, season)
             create_scoreboard(match, match_df, teams)
