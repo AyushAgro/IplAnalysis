@@ -1,15 +1,21 @@
+# Some Common Exceptions which can occur during excution of code
+# we assign code to each code, so we can also print code in log file and
+# then check what that code means somethingh like how sql show it error
+
+# if any match has more than 2 teams
 class DiffrentTeam(Exception):
     def __init__(self):
         self.code = 1
         self.message = "Team used with the Same Match Id is different"
 
-
+# if any Inining exceed 20 over.
 class TooManyBall(Exception):
     def __init__(self):
         self.code = 2
         self.message = "An Single Inning Cannot have more than 20 over"
 
 
+# when format is wrong
 class InvalidFormat(Exception):
     def __init__(self):
         self.code = 3
@@ -17,13 +23,14 @@ class InvalidFormat(Exception):
             "Given Data is not correctly Format, Please Check your data before Passing"
         )
 
-
+# if file we are looking is not found
 class FileNotFound(Exception):
     def __init__(self):
         self.code = 4
         self.message = "File Not Found.. Please Try Again"
 
 
+# when file dosen't have valid extension
 class InvalidFile(Exception):
     def __init__(self, file, fileType):
         self.code = 5
@@ -32,12 +39,13 @@ class InvalidFile(Exception):
         )
 
 
+# if table is empty
 class TableEmpty(Exception):
     def __init__(self):
         self.code = 6
         self.message = "Given Table is Empty"
 
-
+# required columns is not found
 class ColumnsNotFound(Exception):
     def __init__(self, column):
         self.code = 7
@@ -49,7 +57,7 @@ class DirectoryNotFound(Exception):
         self.code = 8
         self.message = f"{dir} not found"
 
-
+# if teams has player count more than 11
 class MaximumPlayer(Exception):
     def __init__(self, name):
         self.code = 9
