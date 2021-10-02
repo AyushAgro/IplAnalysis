@@ -3,13 +3,14 @@ import collections
 import os
 import sys
 import yaml
-from yaml.loader import SafeLoader # to load config file
-import time # to check time used [optional]
-import psutil # to see memory used by out program [optional]
-from log import log_decorator, logger_obj # to handle log
-import exception # to handle exception
+from yaml.loader import SafeLoader  # to load config file
+import time  # to check time used [optional]
+import psutil  # to see memory used by out program [optional]
+from log import log_decorator, logger_obj  # to handle log
+import exception  # to handle exception
 from classes import Team, Match
 from scoreboard import create_scoreboard, preprocessData
+
 
 @log_decorator
 def read_yaml():  # To read Config YAML
@@ -23,7 +24,7 @@ def read_yaml():  # To read Config YAML
     output_dir = os.path.join(os.getcwd(), data["File"]["output_dir"])
     allowed_filetype = data["FileType"]
 
-    # Cheking if data directory is present or not
+    # Checking if data directory is present or not
     if not os.path.exists(data_dir) or not os.path.isdir(data_dir):
         raise exception.DirectoryNotFound(data_dir)
 
@@ -31,7 +32,8 @@ def read_yaml():  # To read Config YAML
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
 
-# Initilazing
+
+# Initializing
 start_time = time.time()
 allowed_filetype = []
 output_dir = ""
@@ -40,6 +42,7 @@ orig_stdout = sys.stdout
 pid = os.getpid()
 p = psutil.Process(pid)
 read_yaml()
+
 
 # to add all team name from _info file if it present
 # it is optional.
@@ -50,6 +53,7 @@ def get_teams(row, team):
         team[team_name] = newTeam
     team[team_name].find_player(row["Player Name"])
 
+
 # lopping every file present in data_dir
 # can use os.walk which we also consider subfolder present in it
 for filename in os.listdir(data_dir):
@@ -57,11 +61,11 @@ for filename in os.listdir(data_dir):
     if filename.split('.')[-1] not in allowed_filetype or "_info" in filename:
         continue
 
-    file = os.path.join(data_dir, filename) # getting file name
+    file = os.path.join(data_dir, filename)  # getting file name
     logger_obj.info(f"Currently Processing File {file}")
 
     df = pd.read_csv(file, low_memory=False)  # reading file.. we just added csv extension
-    df = preprocessData(df) # apply some preprocessing to our data
+    df = preprocessData(df)  # apply some preprocessing to our data
 
     teams = collections.defaultdict(Team)  # variation of python dict
 
@@ -75,7 +79,7 @@ for filename in os.listdir(data_dir):
         df_info = df_info[df_info["Team Name"] != "people"]
         df_info.apply(lambda x: get_teams(x, teams), axis=1)
 
-    except:  # if there is any exception/ error it will simply add it to log.
+    except Exception as e:  # if there is any exception/ error it will simply add it to log.
         logger_obj.warning(f"info File cannot be loaded for given {file}")
 
     if df.empty:
@@ -90,12 +94,12 @@ for filename in os.listdir(data_dir):
 
         # grouping our dataset with respect to mathch_id as it can be treated as primary key
         df_group_match = df.groupby("match_id")
-        al_matches = df_group_match.groups.keys() # getting all_matches keys
+        all_matches = df_group_match.groups.keys()  # getting all_matches keys
 
         # lopping over each match_id present in our dataset.
-        for match_id in al_matches:
+        for match_id in all_matches:
             logger_obj.info(f"Match Start  {match_id}")
-            match_df = df_group_match.get_group(match_id) # acessing data of paticular match
+            match_df = df_group_match.get_group(match_id)  # acessing data of paticular match
 
             if match_df.empty:
                 logger_obj.info(f"Match with id  {match_id} has no data avilable.")
@@ -113,7 +117,7 @@ for filename in os.listdir(data_dir):
             if teams2 not in teams:
                 teams[teams2] = Team(teams2)
 
-            # Add detail of paticualar match, you can use namedTuple.
+            # Add detail of particular match, you can use namedTuple.
             match = Match(match_id, teams1, teams2, venue, start_date, season)
 
             # function to create scoreboard
@@ -122,11 +126,11 @@ for filename in os.listdir(data_dir):
             logger_obj.info(f"Result of  match - {match_id} is added")
             logger_obj.info(f"Match is Ended - {match_id}")
 
-        sys.stdout = orig_stdout # reseting sys.stdout for last line to print in screen
+        sys.stdout = orig_stdout  # resetting sys.stdout for last line to print in screen
 
-print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
-# Total Time Taken for input of size 4036140 is  47.289313554763794
+    print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
+    # Total Time Taken for input of size 4036140 is  47.289313554763794
 
-memory = p.memory_full_info().uss
-memory /= 1024 * 1024
-print("Memory used: {:.2f} MB".format(memory))
+    memory = p.memory_full_info().uss
+    memory /= 1024 * 1024
+    print("Memory used: {:.2f} MB".format(memory))
