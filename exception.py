@@ -48,7 +48,7 @@ class TableEmpty(Exception):
         self.message = "Given Table is Empty"
 
 
-# required columns is not found
+# Required columns is not found
 class ColumnsNotFound(Exception):
     def __init__(self, column):
         self.code = 7

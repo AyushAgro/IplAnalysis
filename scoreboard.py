@@ -1,6 +1,6 @@
 import pandas as pd
 from exception import DiffrentTeam, TooManyBall, ColumnsNotFound
-from log import log_decorator, logger_obj
+from log import log_decorator, logger
 
 pd.options.mode.chained_assignment = None  # to avoid pandas warnings
 
@@ -41,18 +41,18 @@ def create_scoreboard(match, match_df, teams):
     # If it is super over the innings must be greater than 2
     # It it is odd Result was not declared because other team didn't played
 
-    total_innings = match_df["innings"].nunique()
+    totalInnings = match_df["innings"].nunique()
     score = {}
 
     innings = 1  # Inning start from 1
-    while total_innings + 1 > innings:
+    while totalInnings + 1 > innings:
         # Masking on our dataset to get data belong to paticular innings
         # and then applying our get_scoreboard
-        innings_df = match_df[(match_df["innings"] == innings)]
-        innings_df.apply(lambda x: get_scoreboard(x, teams), axis=1)
+        inningsDf = match_df[(match_df["innings"] == innings)]
+        inningsDf.apply(lambda x: get_scoreboard(x, teams), axis=1)
 
-        BattingTeam = teams[innings_df["batting_team"].values[0]]
-        BowlingTeam = teams[innings_df["bowling_team"].values[0]]
+        battingTeam = teams[inningsDf["batting_team"].values[0]]
+        bowlingTeam = teams[inningsDf["bowling_team"].values[0]]
 
         # this was written for super over as if innings is greater than 2 which mean [3,4..]
         # it is super over
@@ -61,71 +61,71 @@ def create_scoreboard(match, match_df, teams):
                 declare_result(score, innings)
                 print("\nSuper Over-" + "I" * (innings // 2))
             except Exception as e:  # if innings is odd
-                logger_obj.error(f'Result for Match_id {match.match_id} was not Declared')
+                logger.error(f"Result for Match_id {match.match_id} was not Declared")
                 print("No Result was Declared")
 
         innings += 1
-        BattingTeam.print_batting()  # to print Batting Scoreboard.
-        score[BattingTeam.name] = [BattingTeam.get_total(), BattingTeam.out]
-        BattingTeam.reset()  # After every inning we need to reset score of each player to zero
-        BowlingTeam.reset()
-
+        battingTeam.print_batting()  # to print Batting Scoreboard.
+        score[battingTeam.name] = [battingTeam.get_total(), battingTeam.out]
+        # After every inning we need to reset score of each player to zero
+        battingTeam.reset_data()
+        bowlingTeam.reset_data()
     try:
         declare_result(score, innings)
     except Exception as e:  # if innings is odd
-        logger_obj.error(f'Result for Match_id {match.match_id} was not Declared')
+        logger.error(f"Result for Match_id {match.match_id} was not Declared")
         print("No Result was Declared")
 
 
 def get_scoreboard(row, teams):
-    BattingTeam = row["batting_team"]
-    BowlingTeam = row["bowling_team"]
+    battingTeam = row["batting_team"]
+    bowlingTeam = row["bowling_team"]
 
-    if BattingTeam not in teams or BowlingTeam not in teams:
-        logger_obj.error("Team given is not as same as given before")
+    if battingTeam not in teams or bowlingTeam not in teams:
+        logger.error("Team given is not as same as given before")
         raise DiffrentTeam
 
     if row["ball"] > 20.0:
-        logger_obj.error("Single Innings can have maximum of 20 Over but it exceed")
+        logger.error("Single Innings can have maximum of 20 Over but it exceed")
         raise TooManyBall
 
-    striker = teams[BattingTeam].find_player(row["striker"])
-    non_striker = teams[BattingTeam].find_player(row["non_striker"])
-    bowler = teams[BowlingTeam].find_player(row["bowler"])
+    striker = teams[battingTeam].find_player(row["striker"])
+    nonStriker = teams[battingTeam].find_player(row["non_striker"])
+    bowler = teams[bowlingTeam].find_player(row["bowler"])
 
-    striker.playing()  # To change player status from Yet To Bat --> Not Out
-    non_striker.playing()
-    striker.ball_played += 1  # striker played one ball
+    striker.is_playing()  # To change player status from Yet To Bat --> Not Out
+    nonStriker.is_playing()
+    striker.ballPlayed += 1  # striker played one ball
     striker.add_run(row["runs_off_bat"])  # adding run to striker
 
     if int(row["extras"]) > 0:  # Checking if there is any extra or not.
-        isExtra(row, teams, BattingTeam, striker)
+        is_extra(row, teams, battingTeam, striker)
 
     if row["player_dismissed"] != "":  # if someone got out
-        isWicket(row, teams, BattingTeam, striker, non_striker, bowler)
+        is_wicket(row, teams, battingTeam, striker, nonStriker, bowler)
 
 
-def isWicket(row, teams, BattingTeam, striker, non_striker, bowler):
-    teams[BattingTeam].out += 1  # increase total out of teams
+def is_wicket(row, teams, battingTeam, striker, nonStriker, bowler):
+    teams[battingTeam].out += 1  # increase total out of teams
 
     player = row["player_dismissed"]
 
     # if wicket type is not run out we have to add bowler name
     if row["wicket_type"] != "run out":
         if striker.name == player:
-            striker.isOut("B " + bowler.name.split()[-1])
+            striker.is_out("B " + bowler.name.split()[-1])
         else:  # not necassary but just added in rare case
-            non_striker.isOut("B " + bowler.name.split()[-1])
+            nonStriker.is_out("B " + bowler.name.split()[-1])
 
     # else it can be striker or non-striker we have to check out player_dismissed
     else:
         if striker.name == player:
-            striker.isOut("Run Out")
+            striker.is_out("Run Out")
         else:
-            non_striker.isOut("Run Out")
+            nonStriker.is_out("Run Out")
 
 
-def isExtra(row, teams, BattingTeam, striker):
+def is_extra(row, teams, battingTeam, striker):
     extras = [
         "wides",
         "noballs",
@@ -137,12 +137,13 @@ def isExtra(row, teams, BattingTeam, striker):
     # whenever bowler throw a ball we add it to striker
     # but if it a no Ball or wide, then we have to remove it as we have already added
     if row["noballs"] > 0 or row["wides"] > 0:
-        striker.ball_played -= 1
+        striker.ballPlayed -= 1
 
     # going columns by columns for checking if there is extra
     for extra in extras:
         if row[extra] > 0:
-            teams[BattingTeam].add_extra(extra[0], row[extra])  # extra will added to batting team
+            # extra will added to batting team
+            teams[battingTeam].add_extra(extra[0], row[extra])
 
 
 def declare_result(score, innings):
@@ -165,7 +166,7 @@ def declare_result(score, innings):
 
 
 @log_decorator
-def preprocessData(df):
+def preprocess_data(df):
     global required_columns
     numeric_dtype = ["wides", "noballs", "byes", "legbyes", "penalty"]
     category_dtype = ["wicket_type", "player_dismissed"]
@@ -180,7 +181,7 @@ def preprocessData(df):
 
         # this mean one of the required columns in not present so we wont be able to read it
         if col not in columns:
-            logger_obj.error(f"{col} Cannot be Found")
+            logger.error(f"{col} Cannot be Found")
             raise ColumnsNotFound(col)
 
         # If col is present we simply check it has minimum required byte for each columns.
@@ -188,9 +189,12 @@ def preprocessData(df):
             try:
                 df[col] = df[col].astype(col_type, errors="raise")
             except ValueError:  # if we can't convert it into minimum required byte, so we continue
-                logger_obj.warning(f"{col} Cannot be changed into {col_type}")
+                logger.warning(f"{col} Cannot be changed into {col_type}")
                 pass
 
-    df = df[required_columns.keys()]  # slicing df to keep only required columns
-    df["start_date"] = df["start_date"].dt.strftime("%d %B %Y")  # Just Increasing readability of datatime
+    # slicing df to keep only required columns
+    df = df[required_columns.keys()]
+    df["start_date"] = df["start_date"].dt.strftime(
+        "%d %B %Y"
+    )  # Just Increasing readability of datatime
     return df

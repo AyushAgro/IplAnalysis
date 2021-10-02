@@ -12,7 +12,7 @@ class Match:
         self.start_date = start_date
         self.season = season
 
-    def __str__(self): # use this to easily print match detail.
+    def __str__(self):  # use this to easily print match detail.
         match_detail = pd.DataFrame(
             {
                 "Match-id": self.match_id,
@@ -32,88 +32,98 @@ class Match:
 class Team:
     def __init__(self, name):
         self.name = name
-        self.players = defaultdict(Player)   # to store player data
+        self.players = defaultdict(Player)  # to store player data
         self.extra = {"b": 0, "l": 0, "w": 0, "nb": 0, "p": 0}  # to add extra
-        self.extra_run = 0
+        self.extraRun = 0
         self.out = 0
-        self.batting_columns = ["Batmans", "Status", "Run", "Ball", "4s", "6s"] # to print batting order
+        self.battingColumns = [
+            "Batmans",
+            "Status",
+            "Run",
+            "Ball",
+            "4s",
+            "6s",
+        ]  # to print batting order
 
     # to find player with name
     def find_player(self, name):
         # if player is not present add him
         if name not in self.players:
             self.players[name] = Player(name)
-        return self.players[name] # return Player()
+        return self.players[name]  # return Player()
 
     # to add_extra to team
     def add_extra(self, type, run):
         self.extra[type] = self.extra.get(type, 0) + run
-        self.extra_run += run
+        self.extraRun += run
 
     # to get total score by team
     def get_total(self):
         runs = 0
         for _, value in self.players.items():
-            runs += value.run_scored
-        return runs + self.extra_run
+            runs += value.runScored
+        return runs + self.extraRun
 
     # to print Batting Order Tabular Order
     def print_batting(self):
-        result = pd.DataFrame(columns=self.batting_columns)
+        result = pd.DataFrame(columns=self.battingColumns)
         for _, player in self.players.items():
             if player.out != "":
-                result = result.append(player.get_Battingdetail(), ignore_index=True)
+                result = result.append(player.get_batting_detail(), ignore_index=True)
 
         table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
-        print(f"\n{self.name}\n{table}\nExtra - {int(self.extra_run)} (", end="")
+        print(f"\n{self.name}\n{table}\nExtra - {int(self.extraRun)} (", end="")
         for key, value in self.extra.items():
             print(f" {key}-{int(value)},", end="")
         print(")")
 
     # after every inning we reset each player stores detail
-    def reset(self):
+    def reset_data(self):
         player_name = list(self.players.keys())
         # print(player_name)
         self.players = defaultdict(Player)
         for player in player_name:
             self.players[player] = Player(player)
         self.extra = {"b": 0, "l": 0, "w": 0, "nb": 0, "p": 0}
-        self.extra_run = 0
+        self.extraRun = 0
         self.out = 0
+
+    def __len__(self):
+        return len(self.players)
 
 
 # To describe each player data
 class Player:
     def __init__(self, name):
         self.name = name
-        self.run_scored = 0
-        self.ball_played = 0
+        self.runScored = 0
+        self.ballPlayed = 0
         self.fours = 0
         self.six = 0
         self.out = ""
 
     def add_run(self, run):
-        self.run_scored += run
+        self.runScored += run
         if run == 4:
             self.fours += 1
         if run == 6:
             self.six += 1
 
     # if any Batman is Playing his isout will be changed to Not Out from this ''
-    def playing(self):
+    def is_playing(self):
         self.out = "Not Out"
 
-    def isOut(self, name):
+    def is_out(self, name):
         self.out = str(name)
 
     # to getting Batting Details
     # you can also write for bowling.
-    def get_Battingdetail(self):
+    def get_batting_detail(self):
         row = {
             "Batmans": self.name,
             "Status": self.out,
-            "Run": self.run_scored,
-            "Ball": self.ball_played,
+            "Run": self.runScored,
+            "Ball": self.ballPlayed,
             "4s": self.fours,
             "6s": self.six,
         }

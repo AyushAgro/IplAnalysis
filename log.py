@@ -9,25 +9,23 @@ from yaml.loader import SafeLoader
 # To print log we simply create a log_decorator.
 # which take function as argument.
 def log_decorator(_func=None):
-    global logger_obj  # accessing logger_obj
+    global logger  # accessing logger
 
     def log_decorator_info(_func=None):  # wrapper function
-
         @functools.wraps(_func)  # for docs, name
         def log_decorator_wrapper(*args, **kwargs):
 
-            logger_obj.info(f"Begin function {_func.__name__}")  # To add function
+            logger.info(f"Begin function {_func.__name__}")  # To add function
             value = None
-
             try:
-                value = _func(*args, **kwargs)  # passing all arguments and keywords arguments
+                value = _func(
+                    *args, **kwargs
+                )  # passing all arguments and keywords arguments
                 # if function is finished with no exception
-                logger_obj.info(f"Ended function : {_func.__name__}")
-
-            except Exception as e:  # if something goes wrong it won't stop the program but will simple add it to log
-                logger_obj.error(f"Exception: {str(sys.exc_info()[1])}")
+                logger.info(f"Ended function : {_func.__name__}")
+            except:  # if something goes wrong it won't stop the program but will simple add it to log
+                logger.error(f"Exception: {str(sys.exc_info()[1])}")
                 pass
-
             return value
 
         return log_decorator_wrapper  # just return wrapper function
@@ -44,27 +42,29 @@ class CustomFormatter(logging.Formatter):
         return super(CustomFormatter, self).format(record)
 
 
-# First we need to create a logger_obj which we use to write into our log file
+# First we need to create a logger which we use to write into our log file
 # it will be called just onces and create a log file we not present or if present it will delete it content
-def get_logger(log_file_name, log_sub_dir="log"):
-    log_dir = os.path.join(os.getcwd(), log_sub_dir)
+
+
+def get_logger(logFileName, log_sub_dir="log"):
+    logDir = os.path.join(os.getcwd(), log_sub_dir)
 
     # check if log directory is present or not
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
+    if not os.path.exists(logDir):
+        os.makedirs(logDir)
 
     # you can use datetime.now()to write log file current time as filename
-    log_file_name = os.path.join(log_dir, (str(log_file_name)))
+    logFileName = os.path.join(logDir, (str(logFileName)))
 
     # this was write so that if there is any data present in log file before hand it will be erase
-    f = open(log_file_name, "w")
+    f = open(logFileName, "w")
     f.truncate()
     f.close()
 
     # creating log_obj with some configuration.
-    logger = logging.Logger(log_file_name)
+    logger = logging.Logger(logFileName)
     logger.setLevel(logging.DEBUG)
-    handler = logging.FileHandler(log_file_name, "a+")
+    handler = logging.FileHandler(logFileName, "a+")
     handler.setFormatter(
         CustomFormatter("%(asctime)s - %(levelname)-10s  - %(message)s")
     )
@@ -73,12 +73,15 @@ def get_logger(log_file_name, log_sub_dir="log"):
 
 
 # just checking for config file
-if os.path.exists(os.path.join(os.getcwd(), 'config.yaml')):
-    with open("config.yaml") as f:
-        data = yaml.load(f, Loader=SafeLoader)
-        log_file = data["File"]["log_file"]
-else:
-    log_file = 'std.log'
-
-# creating our logger_obj
-logger_obj = get_logger(log_file)
+if os.path.exists(os.path.join(os.getcwd(), "config.yaml")):
+    try:
+        with open("config.yaml") as f:
+            data = yaml.load(f, Loader=SafeLoader)
+            logFile = data["File"]["log_file"]
+    except:
+        print(
+            "Please Check Log File path in config.yaml, We have used  std.log if not specify"
+        )
+        logFile = "std.log"
+# creating our logger
+logger = get_logger(logFile)

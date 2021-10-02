@@ -6,10 +6,10 @@ import yaml
 from yaml.loader import SafeLoader  # to load config file
 import time  # to check time used [optional]
 import psutil  # to see memory used by out program [optional]
-from log import log_decorator, logger_obj  # to handle log
+from log import log_decorator, logger  # to handle log
 import exception  # to handle exception
 from classes import Team, Match
-from scoreboard import create_scoreboard, preprocessData
+from scoreboard import create_scoreboard, preprocess_data
 
 
 @log_decorator
@@ -40,6 +40,7 @@ output_dir = ""
 data_dir = ""
 orig_stdout = sys.stdout
 pid = os.getpid()
+total_size = 0
 p = psutil.Process(pid)
 read_yaml()
 
@@ -58,14 +59,17 @@ def get_teams(row, team):
 # can use os.walk which we also consider subfolder present in it
 for filename in os.listdir(data_dir):
     # if it not in allowed extension or it has info in it filename
-    if filename.split('.')[-1] not in allowed_filetype or "_info" in filename:
+    if filename.split(".")[-1] not in allowed_filetype or "_info" in filename:
         continue
 
     file = os.path.join(data_dir, filename)  # getting file name
-    logger_obj.info(f"Currently Processing File {file}")
+    logger.info(f"Currently Processing File {file}")
 
-    df = pd.read_csv(file, low_memory=False)  # reading file.. we just added csv extension
-    df = preprocessData(df)  # apply some preprocessing to our data
+    df = pd.read_csv(
+        file, low_memory=False
+    )  # reading file.. we just added csv extension
+    total_size += df.size
+    df = preprocess_data(df)  # apply some preprocessing to our data
 
     teams = collections.defaultdict(Team)  # variation of python dict
 
@@ -80,14 +84,14 @@ for filename in os.listdir(data_dir):
         df_info.apply(lambda x: get_teams(x, teams), axis=1)
 
     except Exception as e:  # if there is any exception/ error it will simply add it to log.
-        logger_obj.warning(f"info File cannot be loaded for given {file}")
+        logger.warning(f"info File cannot be loaded for given {file}")
 
     if df.empty:
-        logger_obj.error("Empty Table")
+        logger.error("Empty Table")
         raise exception.TableEmpty
 
     # now we create a new file for file in data directory and store our result
-    output_file = ''.join(filename.split('.')[:-1]) + '.txt'
+    output_file = "".join(filename.split(".")[:-1]) + ".txt"
     with open(os.path.join(output_dir, output_file), "w") as f:
 
         sys.stdout = f  # just to write into file which is easy you can use f.write to
@@ -98,11 +102,13 @@ for filename in os.listdir(data_dir):
 
         # lopping over each match_id present in our dataset.
         for match_id in all_matches:
-            logger_obj.info(f"Match Start  {match_id}")
-            match_df = df_group_match.get_group(match_id)  # acessing data of paticular match
+            logger.info(f"Match Start  {match_id}")
+            match_df = df_group_match.get_group(
+                match_id
+            )  # acessing data of paticular match
 
             if match_df.empty:
-                logger_obj.info(f"Match with id  {match_id} has no data avilable.")
+                logger.info(f"Match with id  {match_id} has no data avilable.")
                 continue
 
             teams1 = match_df["batting_team"].values[0]
@@ -123,14 +129,16 @@ for filename in os.listdir(data_dir):
             # function to create scoreboard
             create_scoreboard(match, match_df, teams)
 
-            logger_obj.info(f"Result of  match - {match_id} is added")
-            logger_obj.info(f"Match is Ended - {match_id}")
+            logger.info(f"Result of  match - {match_id} is added")
+            logger.info(f"Match is Ended - {match_id}")
 
-        sys.stdout = orig_stdout  # resetting sys.stdout for last line to print in screen
+        sys.stdout = (
+            orig_stdout  # resetting sys.stdout for last line to print in screen
+        )
 
-    print(f"Total Time Taken for input of size {df.size} is ", time.time() - start_time)
-    # Total Time Taken for input of size 4036140 is  47.289313554763794
-
-    memory = p.memory_full_info().uss
-    memory /= 1024 * 1024
-    print("Memory used: {:.2f} MB".format(memory))
+print(f"Total Time Taken for input of size {total_size} is ", time.time() - start_time)
+# Total Time Taken for input of size 4439754 is  71.97696542739868
+memory = p.memory_full_info().uss
+memory /= 1024 * 1024
+print("Memory used: {:.2f} MB".format(memory))
+# Memory used: 154.15 MB
