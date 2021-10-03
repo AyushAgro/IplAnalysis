@@ -1,25 +1,29 @@
-import pandas as pd
+import sys
+import os
 from exception import DiffrentTeam, TooManyBall, ColumnsNotFound
 from log import log_decorator, logger
+from classes import Team, Match
+from collections import defaultdict
 
-pd.options.mode.chained_assignment = None  # to avoid pandas warnings
+orig_stdout = sys.stdout
+
 
 # Just using to check if we have all required columns and changing their datatype to use minimum
 # For example, just think of columns innings it can have integer like [1,2,3,4,5,6..] so we should not waste
-# 64 byte of integer as given at beginning but we can all in 8 byte hence int8.
+# 64 byte of integer as given at beginning but we can just use 8 byte unsigned interger hence uint8.
 
 required_columns = {
     "match_id": "int64",
-    "season": "object",
-    "start_date": "datetime64",
+    "season": "category",
+    "start_date": "datetime64[ns]",
     "innings": "uint8",
-    "venue": "object",
+    "venue": "category",
     "ball": "float32",
-    "batting_team": "object",
-    "bowling_team": "object",
-    "striker": "object",
-    "non_striker": "object",
-    "bowler": "object",
+    "batting_team": "category",
+    "bowling_team": "category",
+    "striker": "category",
+    "non_striker": "category",
+    "bowler": "category",
     "runs_off_bat": "uint8",
     "extras": "uint8",
     "wides": "uint8",
@@ -27,9 +31,44 @@ required_columns = {
     "byes": "uint8",
     "legbyes": "uint8",
     "penalty": "uint8",
-    "wicket_type": "object",
-    "player_dismissed": "object",
+    "wicket_type": "category",
+    "player_dismissed": "category",
 }
+
+teams = defaultdict(Team)
+
+
+@log_decorator
+def scorboard_utils(match_df):
+    global teams
+    match_id = match_df['match_id'].values[0]
+    logger.info(f"Match Start  {match_id}")
+
+    if match_df.empty:
+        logger.warning(f"Match with id  {match_id} has no data avilable.")
+        return
+
+    teams1 = match_df["batting_team"].values[0]
+    teams2 = match_df["bowling_team"].values[0]
+    venue = match_df["venue"].values[0]
+    season = match_df["season"].values[0]
+    start_date = match_df["start_date"].values[0]
+
+    # if teams are not present add them
+    if teams1 not in teams:
+        teams[teams1] = Team(teams1)
+    teams[teams1].reset_data()
+    if teams2 not in teams:
+        teams[teams2] = Team(teams2)
+    teams[teams2].reset_data()
+
+    match = Match(match_id, teams1, teams2, venue, start_date, season)
+
+    # function to create scoreboard
+    create_scoreboard(match, match_df, teams)
+
+    logger.info(f"Result of  match - {match_id} is added")
+    logger.info(f"Match is Ended - {match_id}")
 
 
 @log_decorator
@@ -49,31 +88,41 @@ def create_scoreboard(match, match_df, teams):
         # Masking on our dataset to get data belong to paticular innings
         # and then applying our get_scoreboard
         inningsDf = match_df[(match_df["innings"] == innings)]
-        inningsDf.apply(lambda x: get_scoreboard(x, teams), axis=1)
+        try:
+            inningsDf.apply(lambda x: get_scoreboard(x, teams), axis=1)
+        except KeyboardInterrupt:
+            print('Hello user you have pressed ctrl-c button. So we are quiting Function')
+            sys.exit()
+        except:
+            logger.error('Exception occur during excution of get_scoreboard')
+            return
 
         battingTeam = teams[inningsDf["batting_team"].values[0]]
         bowlingTeam = teams[inningsDf["bowling_team"].values[0]]
 
         # this was written for super over as if innings is greater than 2 which mean [3,4..]
-        # it is super over
+        # so it is super over
         if innings > 2 and innings % 2 == 1:
             try:
                 declare_result(score, innings)
                 print("\nSuper Over-" + "I" * (innings // 2))
             except Exception as e:  # if innings is odd
-                logger.error(f"Result for Match_id {match.match_id} was not Declared")
+                logger.warning(
+                    f"Result for Match_id {match.match_id} was not Declared")
                 print("No Result was Declared")
 
         innings += 1
         battingTeam.print_batting()  # to print Batting Scoreboard.
         score[battingTeam.name] = [battingTeam.get_total(), battingTeam.out]
+
         # After every inning we need to reset score of each player to zero
         battingTeam.reset_data()
         bowlingTeam.reset_data()
+
     try:
         declare_result(score, innings)
     except Exception as e:  # if innings is odd
-        logger.error(f"Result for Match_id {match.match_id} was not Declared")
+        logger.warning(f"Result for Match_id {match.match_id} was not Declared")
         print("No Result was Declared")
 
 
@@ -84,9 +133,9 @@ def get_scoreboard(row, teams):
     if battingTeam not in teams or bowlingTeam not in teams:
         logger.error("Team given is not as same as given before")
         raise DiffrentTeam
-
     if row["ball"] > 20.0:
-        logger.error("Single Innings can have maximum of 20 Over but it exceed")
+        logger.error(
+            "Single Innings can have maximum of 20 Over but it exceed")
         raise TooManyBall
 
     striker = teams[battingTeam].find_player(row["striker"])
@@ -149,12 +198,14 @@ def is_extra(row, teams, battingTeam, striker):
 def declare_result(score, innings):
     team1, team2 = score.keys()
     # Whenever their is super over innings will be greater than 3 so teams switch or
-    # if teams 1 first Bath then in super Over Bowler team will Bat First
+    # if teams 1 first Bat then in super Over Bowler team will Bat First
     if innings > 3:
         team1, team2 = team2, team1
+
     # If score of team1 is greater than they will win by difference in run
     if score[team1][0] > score[team2][0]:
-        print(f"\n{team1} won the Match by {score[team1][0] - score[team2][0]} Run")
+        print(
+            f"\n{team1} won the Match by {score[team1][0] - score[team2][0]} Run")
 
     # if score of team2 is greater than they will win by 10 - total_out
     elif score[team1][0] < score[team2][0]:
@@ -168,33 +219,17 @@ def declare_result(score, innings):
 @log_decorator
 def preprocess_data(df):
     global required_columns
-    numeric_dtype = ["wides", "noballs", "byes", "legbyes", "penalty"]
-    category_dtype = ["wicket_type", "player_dismissed"]
     columns = df.columns
+    result = [col in columns for col in required_columns.keys()]
+    if not all(result):
+        col_name = columns[result.index(False)]
+        raise ColumnsNotFound(col_name)
+    df = df[list(required_columns.keys())]
 
-    for col, col_type in required_columns.items():
-        # Just filling NaN Value with respect to their datatype
-        if col in numeric_dtype:
-            df[col].fillna(0, inplace=True)
-        if col in category_dtype:
-            df[col].fillna("", inplace=True)
+    df.select_dtypes('object').fillna('', inplace = True)
+    df.select_dtypes(['int64', 'float64']).fillna(0, inplace = True)
+    df = df.astype(required_columns, errors='ignore')
 
-        # this mean one of the required columns in not present so we wont be able to read it
-        if col not in columns:
-            logger.error(f"{col} Cannot be Found")
-            raise ColumnsNotFound(col)
+    df["start_date"] = df["start_date"].dt.strftime("%d %B %Y")
 
-        # If col is present we simply check it has minimum required byte for each columns.
-        else:
-            try:
-                df[col] = df[col].astype(col_type, errors="raise")
-            except ValueError:  # if we can't convert it into minimum required byte, so we continue
-                logger.warning(f"{col} Cannot be changed into {col_type}")
-                pass
-
-    # slicing df to keep only required columns
-    df = df[required_columns.keys()]
-    df["start_date"] = df["start_date"].dt.strftime(
-        "%d %B %Y"
-    )  # Just Increasing readability of datatime
     return df
