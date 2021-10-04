@@ -1,8 +1,7 @@
 from utils import *
 from classes import Team, Match
 from collections import defaultdict
-from config import read_yaml
-
+import asyncio
 """
     Just using to check if we have all required columns and changing their datatype
     to use minimum For example, just think of columns innings it can have integer
@@ -34,7 +33,7 @@ required_columns = {
 
 teams = defaultdict(Team)
 
-def scoreboard_utils(match_df, logger):
+async def scoreboard_utils(match_df, logger):
     global teams
 
     to_write = {}
@@ -65,12 +64,12 @@ def scoreboard_utils(match_df, logger):
 
     # function to create scoreboard
     match_dict['match_detail'] = match.to_dict()
-    create_scoreboard(match_df, teams, match_dict, logger)
+    await asyncio.create_task(create_scoreboard(match_df, teams, match_dict, logger))
     logger.info(f"Result of  match - {match_id} is added")
     logger.info(f"Match is Ended - {match_id}")
     return to_write
 
-def create_scoreboard(match_df, teams, match_dict, logger):
+async def create_scoreboard(match_df, teams, match_dict, logger):
 
     totalInnings = match_df["innings"].nunique()
     score = {}
