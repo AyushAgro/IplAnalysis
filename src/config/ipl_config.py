@@ -3,10 +3,10 @@ from yaml.loader import SafeLoader
 import os
 from utils import ipl_exception
 import logging.config
+import logging
 
 
 def read_yaml():  # To read Config YAML
-
     # reading file with open
     with open("src/config/config.yaml") as f:
         data = yaml.load(f, Loader=SafeLoader)
@@ -27,6 +27,7 @@ def read_yaml():  # To read Config YAML
     # log_dir
     if not os.path.exists(log_dir):
         os.mkdir(log_dir)
+
     logging.config.dictConfig(data['loggers'])
     logger = logging.getLogger('root')
-    return data_dir,output_dir,allowed_filetype,logger
+    return data_dir, output_dir, allowed_filetype, logger

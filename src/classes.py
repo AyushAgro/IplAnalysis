@@ -2,7 +2,6 @@ from collections import defaultdict
 import pandas as pd
 from tabulate import tabulate  # to print in tabular form
 
-
 class Match:
     def __init__(self, match_id, team1, team2, venue, start_date, season):
         self.match_id = match_id
@@ -13,19 +12,14 @@ class Match:
         self.season = season
         self.winner = None
 
-    def __str__(self):  # use this to easily print match detail.
-        match_detail = pd.DataFrame(
-            {
+    def to_dict(self):  # use this to easily print match detail.
+        return {
                 "Match-id": self.match_id,
                 "Teams": self.team1 + " vs " + self.team2,
                 "Venue": self.venue,
                 "season": self.season,
                 "Start Date": self.start_date,
-            },
-            index=[0],
-        )
-        return tabulate(match_detail, headers="keys", tablefmt="grid", showindex=False)
-
+            }
 
 # Each Match can have only two team
 # and each team can have maximum playing player can be 11.
@@ -66,17 +60,18 @@ class Team:
         return runs + self.extraRun
 
     # to print Batting Order Tabular Order
-    def print_batting(self, output_file):
+    def print_batting(self):
+
         result = pd.DataFrame(columns=self.battingColumns)
         for _, player in self.players.items():
             if player.out != "":
                 result = result.append(player.get_batting_detail(), ignore_index=True)
 
-        table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
-        output_file.write(f"\n{self.name}\n{table}\nExtra - {int(self.extraRun)} (")
+        extras = f'Extra - {self.extraRun} '
         for key, value in self.extra.items():
-            output_file.write(f" {key}-{int(value)},")
-        output_file.write(")")
+            extras += f" {key}-{int(value)},"
+        extras +=")"
+        return (result, extras)
 
     # after every inning we reset each player stores detail
     def reset_data(self):

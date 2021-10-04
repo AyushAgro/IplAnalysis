@@ -1,7 +1,7 @@
 from utils import *
 from classes import Team, Match
 from collections import defaultdict
-
+from config import read_yaml
 
 """
     Just using to check if we have all required columns and changing their datatype
@@ -34,10 +34,13 @@ required_columns = {
 
 teams = defaultdict(Team)
 
-
-def scoreboard_utils(match_df, output_file, logger):
+def scoreboard_utils(match_df, logger):
     global teams
+
+    to_write = {}
     match_id = match_df['match_id'].values[0]
+    to_write[f'match_id{match_id}'] = {}
+    match_dict = to_write[f'match_id{match_id}']
     logger.info(f"Match Start  {match_id}")
 
     if match_df.empty:
@@ -61,44 +64,37 @@ def scoreboard_utils(match_df, output_file, logger):
     match = Match(match_id, teams1, teams2, venue, start_date, season)
 
     # function to create scoreboard
-    output_file.write(str(match))
-    create_scoreboard(match, match_df, teams, output_file, logger)
-
+    match_dict['match_detail'] = match.to_dict()
+    create_scoreboard(match_df, teams, match_dict, logger)
     logger.info(f"Result of  match - {match_id} is added")
     logger.info(f"Match is Ended - {match_id}")
+    return to_write
 
-
-def create_scoreboard(match, match_df, teams, output_file, logger):
+def create_scoreboard(match_df, teams, match_dict, logger):
 
     totalInnings = match_df["innings"].nunique()
     score = {}
-    winner = None
-
+    inning_detail = {}
     innings = 1  # Inning start from 1
     while totalInnings + 1 > innings:
-
         inningsDf = match_df[(match_df["innings"] == innings)]
         inningsDf.apply(lambda x: get_scoreboard(x, teams, logger), axis=1)
 
         battingTeam = teams[inningsDf["batting_team"].values[0]]
         bowlingTeam = teams[inningsDf["bowling_team"].values[0]]
+       # if innings > 2 and innings % 2 == 1:
 
-        # this was written for super over as if innings is greater than 2 which mean [3,4..]
-        # so it is super over
-        if innings > 2 and innings % 2 == 1:
-            declare_result(score, innings, output_file)
-            output_file.write("\nSuper Over-" + "I" * (innings // 2))
-
+        key = f'inning_{innings}'
+        inning_detail[key + '_batting'] = battingTeam.print_batting() # to print Batting Scoreboard.
         innings += 1
-        battingTeam.print_batting(output_file)  # to print Batting Scoreboard.
         score[battingTeam.name] = [battingTeam.get_total(), battingTeam.out]
 
         # After every inning we need to reset score of each player to zero
         battingTeam.reset_data()
         bowlingTeam.reset_data()
-    winner = declare_result(score, innings, output_file)
-    match.winner = winner
 
+    match_dict['innings'] = inning_detail
+    match_dict['winner'] = declare_result(score, innings)
 
 def get_scoreboard(row, teams, logger):
     battingTeam = row["batting_team"]
@@ -167,12 +163,11 @@ def is_extra(row, teams, battingTeam, striker):
             teams[battingTeam].add_extra(extra[0], row[extra])
 
 
-def declare_result(score, innings, output_file):
+def declare_result(score, innings):
     try:
         team1, team2 = score.keys()
     except ValueError:
-        output_file.write('Result was not declared')
-        return
+        return 'Result was not declared'
     # Whenever their is super over innings will be greater than 3 so teams switch or
     # if teams 1 first Bat then in super Over Bowler team will Bat First
     if innings > 3:
@@ -180,19 +175,13 @@ def declare_result(score, innings, output_file):
 
     # If score of team1 is greater than they will win by difference in run
     if score[team1][0] > score[team2][0]:
-        output_file.write(
-            f"\n{team1} won the Match by {score[team1][0] - score[team2][0]} Run\n")
-        return team1
+        key = f"{team1} won the Match by {score[team1][0] - score[team2][0]} Run"
+        return key
 
     # if score of team2 is greater than they will win by 10 - total_out
     elif score[team1][0] < score[team2][0]:
-        output_file.write(f"\n{team2} won the Match by {10 - score[team2][1]} wicket\n")
-        return team2
-
-    # Else it will be tie
-    else:
-        output_file.write("\nIt was a tie, So it Time for Super Over\n")
-        return None
+        key = f"{team2} won the Match by {10 - score[team2][1]} wicket"
+        return key
 
 
 def preprocess_data(df):
