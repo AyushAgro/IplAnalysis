@@ -1,7 +1,0 @@
-File:
-  data_dir: 'Data'
-  output_dir: 'Result'
-  log_file: 'std.log'
-
-FileType:
-  - csv

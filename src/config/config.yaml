@@ -1,0 +1,30 @@
+File:
+  data_dir: 'Data'
+  output_dir: 'Result'
+  log_dir: 'log'
+
+FileType:
+  - csv
+
+loggers:
+  version: 1
+  root:
+    handlers: ['file']
+    level: DEBUG
+  formatters:
+    console_format:
+      format: '%(levelname)s - %(message)s'
+    file_format:
+      format: '%(asctime)s - %(levelname)-10s  - %(message)s'
+  handlers:
+    # console:
+    #   class: logging.StreamHandler
+    #   formatter: console_format
+    #   level: ERROR
+    #   stream: ext://sys.stdout
+    file:
+      class : logging.FileHandler
+      mode: w
+      formatter: file_format
+      level: INFO
+      filename: 'log/std.log'

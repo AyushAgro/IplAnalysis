@@ -11,6 +11,7 @@ class Match:
         self.venue = venue
         self.start_date = start_date
         self.season = season
+        self.winner = None
 
     def __str__(self):  # use this to easily print match detail.
         match_detail = pd.DataFrame(
@@ -65,17 +66,17 @@ class Team:
         return runs + self.extraRun
 
     # to print Batting Order Tabular Order
-    def print_batting(self):
+    def print_batting(self, output_file):
         result = pd.DataFrame(columns=self.battingColumns)
         for _, player in self.players.items():
             if player.out != "":
                 result = result.append(player.get_batting_detail(), ignore_index=True)
 
         table = tabulate(result, headers="keys", tablefmt="fancy_grid", showindex=False)
-        print(f"\n{self.name}\n{table}\nExtra - {int(self.extraRun)} (", end="")
+        output_file.write(f"\n{self.name}\n{table}\nExtra - {int(self.extraRun)} (")
         for key, value in self.extra.items():
-            print(f" {key}-{int(value)},", end="")
-        print(")")
+            output_file.write(f" {key}-{int(value)},")
+        output_file.write(")")
 
     # after every inning we reset each player stores detail
     def reset_data(self):
@@ -88,8 +89,6 @@ class Team:
         self.extraRun = 0
         self.out = 0
 
-    def __len__(self):
-        return len(self.players)
 
 
 # To describe each player data

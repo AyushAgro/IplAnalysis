@@ -1,6 +1,6 @@
-setup: requirements.txt
+setup:
 	pip install -r requirements.txt
+
 run:
-	python app.py
-clean:
+	python src/app.py
 	rm -rf __pycache__
